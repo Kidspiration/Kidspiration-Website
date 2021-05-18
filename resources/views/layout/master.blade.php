@@ -115,14 +115,26 @@
         color: white;
       }
 
-      .sidebar div .logout {
-          position: fixed;
-          margin-bottom: 0vh;
+      .sidebar p {
+        position: fixed;
+        text-align: center;
+        font-size: 2vh;
+        bottom: 0%;
+        display: block;
+        left: 4%;
+        color: white;
       }
 
-      .sidebar .logout:hover:not(.active) {
-        background-color: rgb(0, 140, 255);
-        color: white;
+      .sidebar p .github {
+
+          font-size: 115%;
+          color: white;
+          transition: 0s;
+      }
+
+      .sidebar p .github:hover {
+        color: rgb(233, 233, 233);
+        text-decoration: underline;
       }
 
       .bottombar img {
@@ -202,6 +214,7 @@
                         <a class="home" href="{{ route('courses.index') }}"><i class="fas fa-house-damage"></i> Home</a>
                         <a class="courses" href="{{ route('courses.course') }}"><i class="fab fa-discourse"></i> Courses</a>
                         <a class="quizzes" href="{{ route('courses.quiz') }}"><i class="fas fa-sticky-note"></i> Quizzes</a>
+                        <p>Wanna improve our website? <a class="github" href="https://github.com/Kidspiration/Kidspiration-Website" target="_blank">Visit our github</a></p>
                         {{-- <div>
                             <a class="logout" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();

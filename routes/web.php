@@ -65,52 +65,26 @@ Route::post('/course', [CourseController::class, 'store'])
 Route::get('/quiz-admin', [QuizController::class, 'quiz'])
     ->name('courses.quiz');
 
-Route::get('/quiz-create', [QuizController::class, 'CreateQuiz'])
+Route::get('/quiz-create', [QuizController::class, 'create'])
     ->name('quizzes.create');
 
-Route::post('/quiz', [QuizController::class, 'StoreQuiz'])
+Route::post('/quiz', [QuizController::class, 'store'])
     ->name('quizzes.store');
 
-Route::post('/quiz-admin/{quiz}', [QuizController::class, 'Check'])
+Route::post('/quiz-admin/{quiz}', [QuizController::class, 'check'])
     ->name('quizzes.check');
 
-Route::get('/quiz/{quiz}/result', [QuizController::class, 'Result'])
-    ->name('quizzes.result');
-
-Route::get('/quiz-admin/{quiz}', [QuizController::class, 'showAdmin'])
+Route::get('/quiz-admin/{quiz}', [QuizController::class, 'show'])
     ->name('quizzes.showAdmin');
 
 Route::get('/quiz-admin/{quiz}/edit', [QuizController::class, 'edit'])
     ->name('quizzes.edit');
 
-Route::patch('/quiz-admin/{quiz}', [QuizController::class, 'UpdateQuiz'])
+Route::patch('/quiz-admin/{quiz}', [QuizController::class, 'update'])
     ->name('quizzes.update');
-
-// Route::resource('mahasiswas', MahasiswaController::class);
-// Route::get('/mahasiswas', [MahasiswaController::class, 'index'])
-//     ->name('mahasiswas.index');
-
-// Route::get('/mahasiswas/create', [MahasiswaController::class, 'create'])
-//     ->name('mahasiswas.create');
-
-// Route::post('/mahasiswas', [MahasiswaController::class, 'store'])
-//     ->name('mahasiswas.store');
-
-// Route::get('/mahasiswas/{mahasiswa}', [MahasiswaController::class, 'show'])
-//     ->name('mahasiswas.show');
-
-// Route::get('/mahasiswas/{mahasiswa}/edit', [MahasiswaController::class, 'edit'])
-//     ->name('mahasiswas.edit');
-
-// Route::patch('/mahasiswas/{mahasiswa}', [MahasiswaController::class, 'update'])
-//     ->name('mahasiswas.update');
-
-// Route::delete('/quiz-admin', [QuizController::class, 'destroy'])
-//     ->name('quizzes.destroy');
 
 Route::delete('/quiz-admin/delete/{quiz}', [QuizController::class, 'destroy'])
     ->name('quizzes.destroy');
-
 
 Auth::routes();
 

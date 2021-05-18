@@ -11,7 +11,7 @@ class QuizController extends Controller
     public function __construct()
     {
         // $this->middleware('auth');
-        $this->middleware('auth')->only('CreateQuiz','StoreQuiz','UpdateQuiz','edit','destroy');
+        $this->middleware('auth')->only('create','store','update','edit','destroy');
     }
 
     public function quiz()
@@ -20,12 +20,12 @@ class QuizController extends Controller
         return view ('admin.quiz-admin', ['quizzes' => $quizzes]);
     }
 
-    public function CreateQuiz()
+    public function create()
     {
         return view ('admin.create-quiz');
     }
 
-    public function StoreQuiz(Request $request)
+    public function store(Request $request)
     {
         $validateData = $request->validate
         ([
@@ -109,7 +109,7 @@ class QuizController extends Controller
         ->with('message',"{$validateData['name']} added successfully ");
     }
 
-    public function UpdateQuiz(Request $request, $id)
+    public function update(Request $request, $id)
     {
         // $validateData = $request->validate
         DB::table('quizzes')->where('id', $id)->update
@@ -267,10 +267,9 @@ class QuizController extends Controller
         // return redirect()->route('courses.quiz');
         return redirect()->route('quizzes.showAdmin', ['quiz' => $id])
             ->with('message', "{$request->name} updated successfully");
-        // dump($id);
     }
 
-    public function Check(Request $request, $id)
+    public function check(Request $request, $id)
     {
         $score = 0;
 
@@ -313,12 +312,7 @@ class QuizController extends Controller
         // return redirect()->route('quizzes.result',['quiz' => $id]);
     }
 
-    // public function Result(Quiz $quiz)
-    // {
-    //     return view ('admin.result',['quiz' => $quiz, 'nilai' => $score]);
-    // }
-
-    public function showAdmin(Quiz $quiz)
+    public function show(Quiz $quiz)
     {
         // $result = Mahasiswa::findOrFail($mahasiswa);
         return view('admin.show-quiz-admin',['quiz'=>$quiz]);

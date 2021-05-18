@@ -54,7 +54,7 @@
         }
 
         .thumbnail a .caption {
-            background-color: #f3f3f3;
+            background-color: white;
             border-radius: 0 0 10px 10px;
         }
 
@@ -73,6 +73,7 @@
         color: rgb(58, 166, 255);
         text-align: center;
         padding-top: 20px;
+        margin-bottom: 0vh;
         font-weight: 1000;
         /* font-family: 'Acme', sans-serif; */
         /* font-family: 'Courgette', cursive; */
@@ -83,11 +84,22 @@
         /* font-family: 'Titillium Web', sans-serif; */
       }
 
+      .thumbnail a .caption span {
+        color: rgb(58, 166, 255);
+        font-family: 'Pangolin', cursive;
+        padding: 0 13px 13px 13px;
+        font-size: 2.75vh;
+      }
+
+      .thumbnail a .caption span i {
+          margin-right: 1vh;
+      }
+
       .thumbnail a .caption p {
         color: rgb(58, 166, 255);
         text-align: left;
         padding: 0 13px 13px 13px;
-        font-size: 23px;
+        font-size: 3vh;
         /* font-family: 'Acme', sans-serif; */
         /* font-family: 'Courgette', cursive; */
         /* font-family: 'Farro', sans-serif; */
@@ -215,7 +227,8 @@
                             <img src="/img/1.png" alt="Lights">
                             <div class="caption">
                                 <h3>1st Grade</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, hic?</p>
+                                <span><i class="fas fa-book"></i> {{ $courses->where('grade', 'A')->count() }} Courses</span>
+                                <p>Get to know better how to say your family, days and months, and many more in English.</p>
                             </div>
                         </a>
                     </div>
@@ -226,7 +239,8 @@
                             <img src="/img/2.png" alt="Lights">
                             <div class="caption">
                                 <h3>2nd Grade</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, hic?</p>
+                                <span><i class="fas fa-book"></i> {{ $courses->where('grade', 'B')->count() }} Courses</span>
+                                <p>What time is it now? What is your favorite food and drink? What are your hobbies?</p>
                             </div>
                         </a>
                     </div>
@@ -237,7 +251,8 @@
                             <img src="/img/3.png" alt="Lights">
                             <div class="caption">
                                 <h3>3rd Grade</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, hic?</p>
+                                <span><i class="fas fa-book"></i> {{ $courses->where('grade', 'C')->count() }} Courses</span>
+                                <p>Be friendly with English alphabet, advanced numbers, body parts and many more.</p>
                             </div>
                         </a>
                     </div>
@@ -248,7 +263,8 @@
                             <img src="/img/4.png" alt="Lights">
                             <div class="caption">
                                 <h3>4th Grade</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, hic?</p>
+                                <span><i class="fas fa-book"></i> {{ $courses->where('grade', 'D')->count() }} Courses</span>
+                                <p>Both animals and plants are very important for life. So, let's learn it together with us :D</p>
                             </div>
                         </a>
                     </div>
@@ -259,7 +275,8 @@
                             <img src="/img/5.png" alt="Lights">
                             <div class="caption">
                                 <h3>5th Grade</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, hic?</p>
+                                <span><i class="fas fa-book"></i> {{ $courses->where('grade', 'E')->count() }} Courses</span>
+                                <p>It is time to greet someone, introduce yourself to someone, and also understand basic math.</p>
                             </div>
                         </a>
                     </div>
@@ -270,7 +287,8 @@
                             <img src="/img/6.png" alt="Lights">
                             <div class="caption">
                                 <h3>6th Grade</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, hic?</p>
+                                <span><i class="fas fa-book"></i> {{ $courses->where('grade', 'F')->count() }} Courses</span>
+                                <p>Have you ever lost? Understanding direction and place is a key for this situation.</p>
                             </div>
                         </a>
                     </div>

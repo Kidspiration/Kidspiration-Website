@@ -1,2 +1,2 @@
 # Kidspiration-Website
-Start from kind of big homework in university. Still in development
+It's just a kind of big homework we have. But, we assume it like a real project

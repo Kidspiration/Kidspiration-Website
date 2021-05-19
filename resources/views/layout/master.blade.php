@@ -116,20 +116,28 @@
       }
 
       .sidebar p {
-        position: fixed;
+        position: relative;
         text-align: center;
+        margin-top: 95%;
+        margin-bottom: 15%;
         font-size: 2vh;
-        bottom: 0%;
+        bottom: 0;
         display: block;
-        left: 4%;
         color: white;
+        z-index: 2;
       }
 
       .sidebar p .github {
-
           font-size: 115%;
           color: white;
           transition: 0s;
+          margin-top: -5%;
+          z-index: 0;
+      }
+
+      .sidebar p .github .fa-github {
+          font-size: 125%;
+          margin-left: 2%;
       }
 
       .sidebar p .github:hover {
@@ -167,6 +175,36 @@
 
       html.is-animating .transition-fade {
           opacity: 0;
+      }
+
+      @media only screen and (min-width: 1850px) {
+        .sidebar .logo {
+          position: relative;
+          top: 7%;
+          margin-bottom: -50%;
+        }
+
+        .sidebar a {
+          padding: 3vh;
+          text-decoration: none;
+          font-size: 4vh;
+          color: #ffffff;
+          display: block;
+          text-align: center;
+          transition: 0.4s ease;
+          position: relative;
+          top: 30%;
+        }
+
+        .sidebar p {
+            position: relative;
+            text-align: center;
+            margin-top: 90%;
+            font-size: 2vh;
+            bottom: 0;
+            display: block;
+            color: white;
+        }
       }
 
       @media only screen and (max-width: 1100px) {
@@ -214,7 +252,7 @@
                         <a class="home" href="{{ route('courses.index') }}"><i class="fas fa-house-damage"></i> Home</a>
                         <a class="courses" href="{{ route('courses.course') }}"><i class="fab fa-discourse"></i> Courses</a>
                         <a class="quizzes" href="{{ route('courses.quiz') }}"><i class="fas fa-sticky-note"></i> Quizzes</a>
-                        <p>Wanna improve our website? <a class="github" href="https://github.com/Kidspiration/Kidspiration-Website" target="_blank">Visit our github</a></p>
+                        <p>Wanna improve our website? <a class="github" href="https://github.com/Kidspiration/Kidspiration-Website" target="_blank">Visit our <i class="fab fa-github"></i> GitHub</a></p>
                         {{-- <div>
                             <a class="logout" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();

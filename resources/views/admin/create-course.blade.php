@@ -35,7 +35,7 @@
       }
 
       .main .content {
-          max-width: 100vh;
+          max-width: 100%;
         /* font-family: 'Acme', sans-serif; */
         /* font-family: 'Courgette', cursive; */
         /* font-family: 'Farro', sans-serif; */
@@ -87,11 +87,37 @@
 
       .main .content .logout {
           position: fixed;
-          right: 5%;
+          right: 0%;
+          font-size: 3vh;
+          padding: 1vh 2vh 1vh 2vh ;
+          text-decoration: none;
       }
 
       .main .content #name {
           width: 75vh;
+      }
+
+      .input-group label {
+          padding: 7% 100% 7% 10%;
+          margin-right: 7vh;
+          font-size: 3vh;
+      }
+
+      .input-group select {
+          font-size: 3vh;
+          text-align: center;
+          padding-left: 3vh;
+          padding-right: 2vh;
+      }
+
+      .form-group .name {
+          font-size: 4vh;
+      }
+
+      .main .content .insert {
+          margin-top: 3vh;
+          margin-bottom: 3vh;
+          font-size: 4vh;
       }
 
       @media only screen and (min-width: 1850px) {
@@ -200,48 +226,48 @@
                     <a class="logout" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();">
-                        {{ __('Logout') }}
+                        <i class="fas fa-sign-out-alt"></i> {{ __('Logout') }}
                     </a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                         @csrf
                     </form>
                 </div>
                 @endauth
-                <div class="col-md-8 col-xl-6">
+                <div class="col-md-8 ">
                     <h1>Create Course</h1>
                     <hr>
 
                     <form action="{{ route('courses.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
 
-                    <div class="form-group">
-                        <input type="text"
-                        class="form-control @error('grade') is-invalid @enderror"
-                        id="grade" name="grade" value="{{ old('grade') }}" placeholder="Grade for example A, B, C, etc">
-                        @error('grade')
-                          <div class="text-danger">{{ $message }}</div>
-                        @enderror
-                    </div>
+                        <div class="input-group mb-4">
+                            <div class="input-group-prepend">
+                              <label class="input-group-text" for="grade">Grade</label>
+                            </div>
+                            <select class="custom-select @error('grade') is-invalid @enderror"" id="grade" name="grade">
+                              <option selected>Choose...</option>
+                              <option id="grade" name="grade" value="A">A</option>
+                              <option id="grade" name="grade" value="B">B</option>
+                              <option id="grade" name="grade" value="C">C</option>
+                              <option id="grade" name="grade" value="D">E</option>
+                              <option id="grade" name="grade" value="E">F</option>
+                              <option id="grade" name="grade" value="F">G</option>
+                            </select>
+                            @error('grade')
+                                <div class="text-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
 
                     <div class="form-group">
                         <input type="text"
-                        class="form-control @error('course') is-invalid @enderror"
-                        id="course" name="course" value="{{ old('course') }}" placeholder="Grade for example A_1, A_2, etc">
-                        @error('course')
-                          <div class="text-danger">{{ $message }}</div>
-                        @enderror
-                    </div>
-
-                    <div class="form-group">
-                        <input type="text"
-                        class="form-control @error('name') is-invalid @enderror"
+                        class="name form-control @error('name') is-invalid @enderror"
                         id="name" name="name" value="{{ old('name') }}" placeholder="Name your course">
                         @error('name')
                           <div class="text-danger">{{ $message }}</div>
                         @enderror
                     </div>
 
-                    <div class="form-group">
+                    <div class="insert form-group">
                         <label for="berkas">Insert Image </label>
                         <input type="file" class="form-control-file" id="image_1" name="image_1" value="{{ old('material_1') }}">
                         @error('image_1')

@@ -106,7 +106,7 @@ class CourseController extends Controller
             'grade' => 'required',
             'course' => 'required',
             'name' => 'required',
-            'image_1' => 'required|file|image|max:5000',
+            'image_1' => 'file|image|max:5000',
             'material_1' => ''
         ]);
 
@@ -116,7 +116,10 @@ class CourseController extends Controller
         $course->grade = $validateData['grade'];
         $course->course = $validateData['course'];
         $course->name = $validateData['name'];
-        $course->image_1 = $validateData['image_1']->store('img','public');
+
+        if ($request['image_1'] != NULL)
+            $course->image_1 = $validateData['image_1']->store('img','public');
+
         $course->material_1 = $validateData['material_1'];
         $course->save();
 

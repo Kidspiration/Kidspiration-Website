@@ -120,6 +120,18 @@
           font-size: 4vh;
       }
 
+      .main .content .btn {
+          margin-top: 3vh;
+          background: rgb(78, 175, 255);
+          color: white;
+          border: 1px solid rgb(78, 175, 255);
+      }
+
+      .main .content .btn:hover {
+          background: white;
+          color: rgb(78, 175, 255);
+      }
+
       @media only screen and (min-width: 1850px) {
         .sidebar {
             width: 23%;

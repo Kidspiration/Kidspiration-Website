@@ -28,7 +28,7 @@
       .main {
         position: relative;
         margin-left: 0vh; /* Same as the width of the sidenav */
-        font-size: 28px; /* Increased text to enable scrolling */
+        /* Increased text to enable scrolling */
         padding: 0px 0px;
         top: 3vh;
         left: 7vh;
@@ -121,6 +121,23 @@
         color: #ffffff;
       }
 
+      .main .content .logout {
+          position: fixed;
+          right: 0%;
+          font-size: 3vh;
+          padding: 1vh 2vh 1vh 2vh ;
+          text-decoration: none;
+          border: 1px solid rgb(78, 175, 255);
+          border-radius: 1vh;
+          background: white;
+          color: rgb(78, 175, 255);
+      }
+
+      .main .content .logout:hover {
+          background: rgb(78, 175, 255);
+          color: white;
+      }
+
       .main .content h1 {
         /* font-family: 'Acme', sans-serif; */
         /* font-family: 'Courgette', cursive; */
@@ -140,7 +157,12 @@
           width: 50%;
           margin-left: auto;
           margin-right: auto;
+          margin-bottom: 7vh;
+      }
 
+      .main .content p {
+          font-size: 4vh;
+          font-family: 'Pangolin', cursive;
       }
 
       @media only screen and (min-width: 1850px) {
@@ -237,6 +259,17 @@
                         @method('DELETE')
                         @csrf
                         <button type="submit" class="btn btn-danger">Delete</button>
+
+                        <div>
+                            <a class="logout" href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
+                                <i class="fas fa-sign-out-alt"></i> {{ __('Logout') }}
+                            </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
+                        </div>
                     @endauth
                     <h1>{{ $course->name }}</h1>
 

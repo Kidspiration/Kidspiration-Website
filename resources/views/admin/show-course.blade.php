@@ -110,6 +110,7 @@
             color: white;
             margin-top: 3vh;
             margin-bottom: 3vh;
+            font-family: 'Pangolin', cursive;
       }
 
       .main .content .btn:hover {

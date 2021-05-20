@@ -22,7 +22,9 @@
       }
 
       .main .content {
-          max-width: 100vh;
+        max-width: 100%;
+        margin-bottom: 5vh;
+        font-family: 'Titillium Web', sans-serif;
       }
 
       .main .content a {
@@ -67,7 +69,98 @@
 
       .main .content .logout {
           position: fixed;
-          right: 5%;
+          right: 3%;
+          font-size: 3vh;
+          padding: 1vh 2vh 1vh 2vh ;
+          text-decoration: none;
+      }
+
+      .main .content #name {
+          width: 75vh;
+      }
+
+      .input-group label {
+          padding: 7% 100% 7% 10%;
+          margin-right: 7vh;
+          font-size: 3vh;
+      }
+
+      .input-group select {
+          font-size: 3vh;
+          text-align: center;
+          padding-left: 3vh;
+          padding-right: 2vh;
+      }
+
+      .form-group .name {
+          font-size: 4vh;
+      }
+
+      .main .content .insert {
+          margin-top: 3vh;
+          margin-bottom: 3vh;
+          font-size: 4vh;
+      }
+
+      .main .content .btn {
+          margin-top: 3vh;
+          background: rgb(78, 175, 255);
+          color: white;
+          border: 1px solid rgb(78, 175, 255);
+      }
+
+      .main .content .btn:hover {
+          background: white;
+          color: rgb(78, 175, 255);
+      }
+
+      @media only screen and (min-width: 1850px) {
+        .sidebar {
+            width: 23%;
+        }
+
+        .bottombar {
+            display: none;
+        }
+
+        .main .content {
+          position: relative;
+          left: 5%;
+          right: 10%;
+          top: 5%;
+        }
+      }
+
+      @media only screen and (max-width: 1849px) {
+        .sidebar {
+            width: 20%;
+        }
+
+        .sidebar a {
+            position: relative;
+            top: 35%;
+            font-size: 4vh;
+        }
+
+        .sidebar .logo {
+            top: 7%;
+        }
+
+        .sidebar .image {
+            width: 60%;
+        }
+
+        .sidebar .fas {
+            font-size: 5vh;
+        }
+
+        .sidebar .fab {
+            font-size: 5vh;
+        }
+
+        .bottombar {
+            display: none;
+        }
       }
 
       @media only screen and (max-width: 1100px) {
@@ -127,14 +220,14 @@
                     <a class="logout" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();">
-                        {{ __('Logout') }}
+                        <i class="fas fa-sign-out-alt"></i> {{ __('Logout') }}
                     </a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                         @csrf
                     </form>
                 </div>
                 @endauth
-                <div class="col-md-8 col-xl-6">
+                <div class="col-md-8">
                     <h1>Edit Course</h1>
                     <hr>
 
@@ -143,23 +236,35 @@
                     @method('PATCH')
                     @csrf
 
-                    <div class="form-group">
-                        <input type="text"
-                        class="form-control @error('grade') is-invalid @enderror"
-                        id="grade" name="grade" value="{{ old('grade') ?? $course->grade }}" placeholder="Grade for example A, B, C, etc">
-                        @error('grade')
-                          <div class="text-danger">{{ $message }}</div>
-                        @enderror
-                    </div>
-
-                    <div class="form-group">
-                        <input type="text"
-                        class="form-control @error('course') is-invalid @enderror"
-                        id="course" name="course" value="{{ old('course') ?? $course->course }}" placeholder="Course for example A_1, A_2, etc">
-                        @error('course')
-                          <div class="text-danger">{{ $message }}</div>
-                        @enderror
-                    </div>
+                    <div class="input-group mb-4">
+                            <div class="input-group-prepend">
+                              <label class="input-group-text" for="grade">Grade</label>
+                            </div>
+                            <select class="custom-select @error('grade') is-invalid @enderror" id="grade" name="grade">
+                              <option >Choose...</option>
+                              <option id="grade" name="grade" value="A"
+                                {{ (old('grade') ?? $course->grade)
+                                == 'A' ? 'selected' : '' }}>A</option>
+                              <option id="grade" name="grade" value="B"
+                                {{ (old('grade') ?? $course->grade)
+                                == 'B' ? 'selected' : '' }}>B</option>
+                              <option id="grade" name="grade" value="C"
+                                {{ (old('grade') ?? $course->grade)
+                                == 'C' ? 'selected' : '' }}>C</option>
+                              <option id="grade" name="grade" value="D"
+                                {{ (old('grade') ?? $course->grade)
+                                == 'D' ? 'selected' : '' }}>D</option>
+                              <option id="grade" name="grade" value="E"
+                                {{ (old('grade') ?? $course->grade)
+                                == 'E' ? 'selected' : '' }}>E</option>
+                              <option id="grade" name="grade" value="F"
+                                {{ (old('grade') ?? $course->grade)
+                                == 'F' ? 'selected' : '' }}>F</option>
+                            </select>
+                            @error('grade')
+                                <div class="text-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
 
                     <div class="form-group">
                         <input type="text"
@@ -167,6 +272,18 @@
                         id="name" name="name" value="{{ old('name') ?? $course->name }}" placeholder="Name your course">
                         @error('name')
                           <div class="text-danger">{{ $message }}</div>
+                        @enderror
+                    </div>
+
+                    @if ($course->image_1 != NULL)
+                        <img class="image1" src={{asset('storage/' . $course->image_1)}} alt="Image_1">
+                    @endif
+
+                    <div class="insert form-group">
+                        <label for="berkas">Image </label>
+                        <input type="file" class="form-control-file" id="image_1" name="image_1" value="{{ old('image_1') ?? $course->image_1 }}">
+                        @error('image_1')
+                            <div class="text-danger">{{ $message }}</div>
                         @enderror
                     </div>
 

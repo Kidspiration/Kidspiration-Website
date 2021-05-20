@@ -158,11 +158,19 @@ class CourseController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $validateData = $request->validate
+        ([
+            'image_1' => 'file|image|max:5000',
+        ]);
+
+        if ($request['image_1'] != NULL)
+            $request->image_1 = $validateData['image_1']->store('img','public');
+
         DB::table('courses')->where('id', $id)->update
         ([
             'grade' => $request->grade,
-            'course' => $request->course,
             'name' => $request->name,
+            'image_1' => $request->image_1,
             'material_1' => $request->material_1
         ]);
 

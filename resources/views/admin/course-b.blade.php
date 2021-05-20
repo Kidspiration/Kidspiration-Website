@@ -100,7 +100,10 @@
 
       .main .content .logout {
           position: fixed;
-          right: 5%;
+          right: 0%;
+          font-size: 3vh;
+          padding: 1vh 2vh 1vh 2vh ;
+          text-decoration: none;
       }
 
       @media only screen and (min-width: 1850px) {
@@ -214,7 +217,7 @@
                     <a class="logout" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();">
-                        {{ __('Logout') }}
+                        <i class="fas fa-sign-out-alt"></i> {{ __('Logout') }}
                     </a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                         @csrf

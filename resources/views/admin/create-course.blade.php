@@ -256,14 +256,14 @@
                             <div class="input-group-prepend">
                               <label class="input-group-text" for="grade">Grade</label>
                             </div>
-                            <select class="custom-select @error('grade') is-invalid @enderror"" id="grade" name="grade">
+                            <select class="custom-select @error('grade') is-invalid @enderror" id="grade" name="grade">
                               <option selected>Choose...</option>
                               <option id="grade" name="grade" value="A">A</option>
                               <option id="grade" name="grade" value="B">B</option>
                               <option id="grade" name="grade" value="C">C</option>
-                              <option id="grade" name="grade" value="D">E</option>
-                              <option id="grade" name="grade" value="E">F</option>
-                              <option id="grade" name="grade" value="F">G</option>
+                              <option id="grade" name="grade" value="D">D</option>
+                              <option id="grade" name="grade" value="E">E</option>
+                              <option id="grade" name="grade" value="F">F</option>
                             </select>
                             @error('grade')
                                 <div class="text-danger">{{ $message }}</div>
@@ -281,7 +281,7 @@
 
                     <div class="insert form-group">
                         <label for="berkas">Insert Image </label>
-                        <input type="file" class="form-control-file" id="image_1" name="image_1" value="{{ old('material_1') }}">
+                        <input type="file" class="form-control-file" id="image_1" name="image_1" value="{{ old('image_1') }}">
                         @error('image_1')
                             <div class="text-danger">{{ $message }}</div>
                         @enderror

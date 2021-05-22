@@ -659,13 +659,43 @@
                             @enderror
                         </div>
 
-                        <div class="form-group">
-                            <input type="text"
-                            class="answer form-control @error('quiz_5_correct') is-invalid @enderror"
-                            id="quiz_5_correct" name="quiz_5_correct" value="{{ old('quiz_5_correct') }}" placeholder="Correct answer">
-                            @error('quiz_5_correct')
-                              <div class="text-danger">{{ $message }}</div>
-                            @enderror
+                        <div class="quiz-correct form-group">
+                            <div>
+                              <label id="abc" for="quiz_5_correct">Correct Answer</label>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="quiz_5_correct"
+                                id="quiz_5_correct" value="A"
+                                {{ old('quiz_5_correct') == 'A' ? 'checked': '' }} >
+                                <label class="form-check-label" for="quiz_5_correct">A</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="quiz_5_correct"
+                                id="quiz_5_correct" value="B"
+                                {{ old('quiz_5_correct') == 'B' ? 'checked': '' }} >
+                                <label class="form-check-label" for="quiz_5_correct">B</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="quiz_5_correct"
+                                id="quiz_5_correct" value="C"
+                                {{ old('quiz_5_correct') == 'C' ? 'checked': '' }} >
+                                <label class="form-check-label" for="quiz_5_correct">C</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="quiz_5_correct"
+                                id="quiz_5_correct" value="D"
+                                {{ old('quiz_5_correct') == 'D' ? 'checked': '' }} >
+                                <label class="form-check-label" for="quiz_5_correct">D</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="quiz_5_correct"
+                                id="quiz_5_correct" value="E"
+                                {{ old('quiz_5_correct') == 'E' ? 'checked': '' }} >
+                                <label class="form-check-label" for="quiz_5_correct">E</label>
+                              </div>
+                              @error('quiz_5_correct')
+                                <div class="text-danger">{{ $message }}</div>
+                              @enderror
+                            </div>
                         </div>
 
                         <div class="form-group">
@@ -722,13 +752,43 @@
                             @enderror
                         </div>
 
-                        <div class="form-group">
-                            <input type="text"
-                            class="answer form-control @error('quiz_6_correct') is-invalid @enderror"
-                            id="quiz_6_correct" name="quiz_6_correct" value="{{ old('quiz_6_correct') }}" placeholder="Correct answer">
-                            @error('quiz_6_correct')
-                              <div class="text-danger">{{ $message }}</div>
-                            @enderror
+                        <div class="quiz-correct form-group">
+                            <div>
+                              <label id="abc" for="quiz_6_correct">Correct Answer</label>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="quiz_6_correct"
+                                id="quiz_6_correct" value="A"
+                                {{ old('quiz_6_correct') == 'A' ? 'checked': '' }} >
+                                <label class="form-check-label" for="quiz_6_correct">A</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="quiz_6_correct"
+                                id="quiz_6_correct" value="B"
+                                {{ old('quiz_6_correct') == 'B' ? 'checked': '' }} >
+                                <label class="form-check-label" for="quiz_6_correct">B</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="quiz_6_correct"
+                                id="quiz_6_correct" value="C"
+                                {{ old('quiz_6_correct') == 'C' ? 'checked': '' }} >
+                                <label class="form-check-label" for="quiz_6_correct">C</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="quiz_6_correct"
+                                id="quiz_6_correct" value="D"
+                                {{ old('quiz_6_correct') == 'D' ? 'checked': '' }} >
+                                <label class="form-check-label" for="quiz_6_correct">D</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="quiz_6_correct"
+                                id="quiz_6_correct" value="E"
+                                {{ old('quiz_6_correct') == 'E' ? 'checked': '' }} >
+                                <label class="form-check-label" for="quiz_6_correct">E</label>
+                              </div>
+                              @error('quiz_6_correct')
+                                <div class="text-danger">{{ $message }}</div>
+                              @enderror
+                            </div>
                         </div>
 
                         <div class="form-group">
@@ -785,13 +845,43 @@
                             @enderror
                         </div>
 
-                        <div class="form-group">
-                            <input type="text"
-                            class="answer form-control @error('quiz_7_correct') is-invalid @enderror"
-                            id="quiz_7_correct" name="quiz_7_correct" value="{{ old('quiz_7_correct') }}" placeholder="Correct answer">
-                            @error('quiz_7_correct')
-                              <div class="text-danger">{{ $message }}</div>
-                            @enderror
+                         <div class="quiz-correct form-group">
+                            <div>
+                              <label id="abc" for="quiz_7_correct">Correct Answer</label>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="quiz_7_correct"
+                                id="quiz_7_correct" value="A"
+                                {{ old('quiz_7_correct') == 'A' ? 'checked': '' }} >
+                                <label class="form-check-label" for="quiz_7_correct">A</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="quiz_7_correct"
+                                id="quiz_7_correct" value="B"
+                                {{ old('quiz_7_correct') == 'B' ? 'checked': '' }} >
+                                <label class="form-check-label" for="quiz_7_correct">B</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="quiz_7_correct"
+                                id="quiz_7_correct" value="C"
+                                {{ old('quiz_7_correct') == 'C' ? 'checked': '' }} >
+                                <label class="form-check-label" for="quiz_7_correct">C</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="quiz_7_correct"
+                                id="quiz_7_correct" value="D"
+                                {{ old('quiz_7_correct') == 'D' ? 'checked': '' }} >
+                                <label class="form-check-label" for="quiz_7_correct">D</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="quiz_7_correct"
+                                id="quiz_7_correct" value="E"
+                                {{ old('quiz_7_correct') == 'E' ? 'checked': '' }} >
+                                <label class="form-check-label" for="quiz_7_correct">E</label>
+                              </div>
+                              @error('quiz_7_correct')
+                                <div class="text-danger">{{ $message }}</div>
+                              @enderror
+                            </div>
                         </div>
 
                         <div class="form-group">
@@ -848,13 +938,43 @@
                             @enderror
                         </div>
 
-                        <div class="form-group">
-                            <input type="text"
-                            class="answer form-control @error('quiz_8_correct') is-invalid @enderror"
-                            id="quiz_8_correct" name="quiz_8_correct" value="{{ old('quiz_8_correct') }}" placeholder="Correct answer">
-                            @error('quiz_8_correct')
-                              <div class="text-danger">{{ $message }}</div>
-                            @enderror
+                       <div class="quiz-correct form-group">
+                            <div>
+                              <label id="abc" for="quiz_8_correct">Correct Answer</label>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="quiz_8_correct"
+                                id="quiz_8_correct" value="A"
+                                {{ old('quiz_8_correct') == 'A' ? 'checked': '' }} >
+                                <label class="form-check-label" for="quiz_8_correct">A</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="quiz_8_correct"
+                                id="quiz_8_correct" value="B"
+                                {{ old('quiz_8_correct') == 'B' ? 'checked': '' }} >
+                                <label class="form-check-label" for="quiz_8_correct">B</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="quiz_8_correct"
+                                id="quiz_8_correct" value="C"
+                                {{ old('quiz_8_correct') == 'C' ? 'checked': '' }} >
+                                <label class="form-check-label" for="quiz_8_correct">C</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="quiz_8_correct"
+                                id="quiz_8_correct" value="D"
+                                {{ old('quiz_8_correct') == 'D' ? 'checked': '' }} >
+                                <label class="form-check-label" for="quiz_8_correct">D</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="quiz_8_correct"
+                                id="quiz_8_correct" value="E"
+                                {{ old('quiz_8_correct') == 'E' ? 'checked': '' }} >
+                                <label class="form-check-label" for="quiz_8_correct">E</label>
+                              </div>
+                              @error('quiz_8_correct')
+                                <div class="text-danger">{{ $message }}</div>
+                              @enderror
+                            </div>
                         </div>
 
                         <div class="form-group">
@@ -910,13 +1030,43 @@
                             @enderror
                         </div>
 
-                        <div class="form-group">
-                            <input type="text"
-                            class="answer form-control @error('quiz_9_correct') is-invalid @enderror"
-                            id="quiz_9_correct" name="quiz_9_correct" value="{{ old('quiz_9_correct') }}" placeholder="Correct answer">
-                            @error('quiz_9_correct')
-                              <div class="text-danger">{{ $message }}</div>
-                            @enderror
+                        <div class="quiz-correct form-group">
+                            <div>
+                              <label id="abc" for="quiz_9_correct">Correct Answer</label>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="quiz_9_correct"
+                                id="quiz_9_correct" value="A"
+                                {{ old('quiz_9_correct') == 'A' ? 'checked': '' }} >
+                                <label class="form-check-label" for="quiz_9_correct">A</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="quiz_9_correct"
+                                id="quiz_9_correct" value="B"
+                                {{ old('quiz_9_correct') == 'B' ? 'checked': '' }} >
+                                <label class="form-check-label" for="quiz_9_correct">B</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="quiz_9_correct"
+                                id="quiz_9_correct" value="C"
+                                {{ old('quiz_9_correct') == 'C' ? 'checked': '' }} >
+                                <label class="form-check-label" for="quiz_9_correct">C</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="quiz_9_correct"
+                                id="quiz_9_correct" value="D"
+                                {{ old('quiz_9_correct') == 'D' ? 'checked': '' }} >
+                                <label class="form-check-label" for="quiz_9_correct">D</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="quiz_9_correct"
+                                id="quiz_9_correct" value="E"
+                                {{ old('quiz_9_correct') == 'E' ? 'checked': '' }} >
+                                <label class="form-check-label" for="quiz_9_correct">E</label>
+                              </div>
+                              @error('quiz_9_correct')
+                                <div class="text-danger">{{ $message }}</div>
+                              @enderror
+                            </div>
                         </div>
 
                         <div class="form-group">
@@ -973,13 +1123,43 @@
                             @enderror
                         </div>
 
-                        <div class="form-group">
-                            <input type="text"
-                            class="answer form-control @error('quiz_10_correct') is-invalid @enderror"
-                            id="quiz_10_correct" name="quiz_10_correct" value="{{ old('quiz_10_correct') }}" placeholder="QCorrect answer">
-                            @error('quiz_10_correct')
-                              <div class="text-danger">{{ $message }}</div>
-                            @enderror
+                        <div class="quiz-correct form-group">
+                            <div>
+                              <label id="abc" for="quiz_10_correct">Correct Answer</label>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="quiz_10_correct"
+                                id="quiz_10_correct" value="A"
+                                {{ old('quiz_10_correct') == 'A' ? 'checked': '' }} >
+                                <label class="form-check-label" for="quiz_10_correct">A</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="quiz_10_correct"
+                                id="quiz_10_correct" value="B"
+                                {{ old('quiz_10_correct') == 'B' ? 'checked': '' }} >
+                                <label class="form-check-label" for="quiz_10_correct">B</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="quiz_10_correct"
+                                id="quiz_10_correct" value="C"
+                                {{ old('quiz_10_correct') == 'C' ? 'checked': '' }} >
+                                <label class="form-check-label" for="quiz_10_correct">C</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="quiz_10_correct"
+                                id="quiz_10_correct" value="D"
+                                {{ old('quiz_10_correct') == 'D' ? 'checked': '' }} >
+                                <label class="form-check-label" for="quiz_10_correct">D</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="quiz_10_correct"
+                                id="quiz_10_correct" value="E"
+                                {{ old('quiz_10_correct') == 'E' ? 'checked': '' }} >
+                                <label class="form-check-label" for="quiz_10_correct">E</label>
+                              </div>
+                              @error('quiz_10_correct')
+                                <div class="text-danger">{{ $message }}</div>
+                              @enderror
+                            </div>
                         </div>
 
                         <button type="submit" class="btn btn-primary mb-2">Create</button>

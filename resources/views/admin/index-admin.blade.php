@@ -239,7 +239,7 @@
                 </div>
                 @endauth
                 <img class="logo " src="/img/logo_1.png" alt="KDS">
-                <p class="intro ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, dolore. Distinctio minus qui fuga laboriosam! Recusandae similique laboriosam iste ipsam, repellat, harum sed neque nesciunt natus vero tenetur.</p>
+                <p class="intro ">Selamat datang di Kidspiration! Kami di sini memberikan pembelajaran mengenai materi bahasa Inggris untuk siswa dan siswi sekolah dasar yang bisa memudahkan kalian dalam belajar bahasa Inggris dengan lebih mudah.</p>
                 <a name="" id="" class="start create btn btn-primary" href="{{ route('courses.course') }}" role="button"><i class="fab fa-studiovinari"></i>Let's Go</a>
             </div>
         </div>

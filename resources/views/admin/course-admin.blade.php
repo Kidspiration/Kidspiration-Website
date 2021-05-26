@@ -206,6 +206,11 @@
     </style>
 
         <div class="main col">
+            @if(session()->has('message'))
+            <div class="alert alert-success">
+                {{ session()->get('message') }}
+            </div>
+            @endif
             <div class="row animated fadeInUp">
                 <div class="col-md-4 ">
                     @auth
@@ -218,11 +223,7 @@
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                             @csrf
                         </form>
-                        @if(session()->has('message'))
-                            <div class="alert alert-success">
-                                {{ session()->get('message') }}
-                            </div>
-                        @endif
+
                     </div>
                     @endauth
                     <div class="thumbnail ">

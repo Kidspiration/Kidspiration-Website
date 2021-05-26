@@ -39,6 +39,7 @@
 
       .main .content {
           max-width: 100vh;
+          position: relative;
         /* font-family: 'Acme', sans-serif; */
         /* font-family: 'Courgette', cursive; */
         /* font-family: 'Farro', sans-serif; */
@@ -62,6 +63,7 @@
         background: white;
         color: rgb(78, 175, 255);
         font-size: 4vh;
+        width: 120vh;
       }
 
       .main .content .quiz:hover {
@@ -138,10 +140,14 @@
         }
 
         .main .content {
-          position: fixed;
-          left: 32%;
+          position: relative;
+          left: 7%;
           right: 10%;
-          top: 12%;
+          top: 5%;
+        }
+
+        .main .content .quiz {
+            width: 100vh;
         }
       }
 
@@ -177,10 +183,11 @@
         }
 
         .main .content {
-          position: fixed;
-          left: 35%;
-          right: 10%;
-          top: 12%;
+          position: relative;
+          left: 7%;
+          right: 7%;
+          top: 3%;
+          margin-bottom: 14%;
         }
 
         .bottombar {

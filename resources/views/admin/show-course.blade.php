@@ -166,6 +166,31 @@
           font-family: 'Pangolin', cursive;
       }
 
+      .bottom {
+          background: linear-gradient(rgb(61, 168, 255),rgb(78, 175, 255));
+          left: -25%;
+          right: -50%;
+          bottom: 0;
+          position: absolute;
+          width: 132.5%;
+          height: 100px;
+          z-index: 7;
+          margin-bottom: -200px;
+          color: white;
+          overflow: auto;
+      }
+
+      .bottom .writers {
+          position: relative;
+          z-index: 5;
+          font-size: 2.3vh;
+          left: 18%;
+          margin-top: 3.5%;
+          max-width: 500px;
+          bottom: 0;
+          font-weight: lighter;
+      }
+
       @media only screen and (min-width: 1850px) {
         .sidebar {
             width: 23%;
@@ -178,9 +203,34 @@
         .main .content {
           position: relative;
           left: 5%;
-          right: 10%;
-          top: 5%;
+          right: 0%;
+          top: 0%;
         }
+
+        .bottom {
+          background: linear-gradient(rgb(61, 168, 255),rgb(78, 175, 255));
+          left: -25%;
+          right: -50%;
+          bottom: 0;
+          position: absolute;
+          width: 135.9%;
+          height: 100px;
+          z-index: 7;
+          margin-bottom: -200px;
+          color: white;
+          overflow: auto;
+      }
+
+      .bottom .writers {
+          position: relative;
+          z-index: 5;
+          font-size: 2.3vh;
+          left: 18%;
+          margin-top: 2.3%;
+          max-width: 500px;
+          bottom: 0;
+          font-weight: lighter;
+      }
       }
 
       @media only screen and (max-width: 1849px) {
@@ -280,7 +330,12 @@
 
                     <p class="material">{!! $course->material_1 !!}</p>
 
+
+        <div class="bottom">
+            <h4 class="writers">Written by {{ $course->writer }}</h4>
+        </div>
                 </div>
             </div>
         </div>
+
 @endsection

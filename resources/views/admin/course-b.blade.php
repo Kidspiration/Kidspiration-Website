@@ -1,8 +1,23 @@
 @extends('layout/master')
-@section('title','Kidspiration Courses 2nd Grade')
+@section('title', 'Kidspiration Courses 2nd Grade')
 
 @section('content')
     <style>
+        .animated.fadeIn {
+            animation-duration: .0s;
+            animation-delay: .0s;
+        }
+
+        .animated.zoomIn {
+            animation-duration: .0s;
+            animation-delay: .0s;
+        }
+
+        .animated.fadeInUp {
+            animation-duration: .7s;
+            animation-delay: .8s;
+        }
+
         body {
             background-image: linear-gradient(rgba(255, 255, 255, 0.698),rgba(255, 255, 255, 0.678)), url(/img/bg7.jpg);
             background-position: center;
@@ -18,13 +33,20 @@
         top: 3vh;
         left: 7vh;
         right: 10vh;
-
         box-sizing: border-box;
 
       }
 
       .main .content {
           max-width: 100vh;
+          position: relative;
+        /* font-family: 'Acme', sans-serif; */
+        /* font-family: 'Courgette', cursive; */
+        /* font-family: 'Farro', sans-serif; */
+        /* font-family: 'Indie Flower', cursive; */
+        /* font-family: 'Kalam', cursive; */
+        font-family: 'Pangolin', cursive;
+        /* font-family: 'Titillium Web', sans-serif; */
       }
 
       .main .content .quiz {
@@ -40,6 +62,8 @@
         border-radius: 1vh;
         background: white;
         color: rgb(78, 175, 255);
+        font-size: 4vh;
+        width: 120vh;
       }
 
       .main .content .quiz:hover {
@@ -116,10 +140,14 @@
         }
 
         .main .content {
-          position: fixed;
-          left: 32%;
+          position: relative;
+          left: 7%;
           right: 10%;
-          top: 12%;
+          top: 5%;
+        }
+
+        .main .content .quiz {
+            width: 100vh;
         }
       }
 
@@ -155,10 +183,11 @@
         }
 
         .main .content {
-          position: fixed;
-          left: 35%;
-          right: 10%;
-          top: 12%;
+          position: relative;
+          left: 7%;
+          right: 7%;
+          top: 3%;
+          margin-bottom: 14%;
         }
 
         .bottombar {
@@ -211,7 +240,7 @@
     </style>
 
         <div class="main col">
-            <div class="content">
+            <div class="content animated fadeInUp">
                 @auth
                 <div>
                     <a class="logout" href="{{ route('logout') }}"

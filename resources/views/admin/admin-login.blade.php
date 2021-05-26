@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/87c10079f1.js" crossorigin="anonymous"></script>
     <title>Welcome to Kidspiration</title>
+    <link rel="icon" type="image/png" href="/img/K.png">
 </head>
 <style>
     .animated.pulse {

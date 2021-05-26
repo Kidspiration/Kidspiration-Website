@@ -75,10 +75,6 @@
           text-decoration: none;
       }
 
-      .main .content #name {
-          width: 75vh;
-      }
-
       .input-group label {
           padding: 7% 100% 7% 10%;
           margin-right: 7vh;
@@ -93,6 +89,15 @@
       }
 
       .form-group .name {
+          font-size: 4vh;
+      }
+
+      .content form .form-group .course {
+          width: 35%;
+      }
+
+      .main .content #name {
+          width: 105vh;
           font-size: 4vh;
       }
 
@@ -112,6 +117,11 @@
       .main .content .btn:hover {
           background: white;
           color: rgb(78, 175, 255);
+      }
+
+      .image1 {
+          width: 55vh;
+          height: auto;
       }
 
       @media only screen and (min-width: 1850px) {
@@ -271,6 +281,24 @@
                         class="form-control @error('name') is-invalid @enderror"
                         id="name" name="name" value="{{ old('name') ?? $course->name }}" placeholder="Name your course">
                         @error('name')
+                          <div class="text-danger">{{ $message }}</div>
+                        @enderror
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text"
+                        class="course form-control @error('course') is-invalid @enderror"
+                        id="course" name="course" value="{{ old('course') ?? $course->course }}" placeholder="For example A1, B2, etc">
+                        @error('course')
+                          <div class="text-danger">{{ $message }}</div>
+                        @enderror
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text"
+                        class="writer form-control @error('writer') is-invalid @enderror"
+                        id="writer" name="writer" value="{{ old('writer') ?? $course->writer }}" placeholder="Written by">
+                        @error('writer')
                           <div class="text-danger">{{ $message }}</div>
                         @enderror
                     </div>

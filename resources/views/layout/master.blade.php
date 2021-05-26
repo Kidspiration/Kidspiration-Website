@@ -33,7 +33,7 @@
         left: 0;
         z-index: 1;
         background: linear-gradient(rgb(58, 166, 255),rgb(78, 175, 255));
-        overflow: auto;
+        overflow: hidden;
         box-shadow: 1px 0px 15px 3px #8b8b8b;
       }
 
@@ -119,12 +119,13 @@
         position: relative;
         text-align: center;
         margin-top: 95%;
-        margin-bottom: 15%;
+        margin-bottom: 20%;
         font-size: 2vh;
         bottom: 0;
         display: block;
         color: white;
         z-index: 2;
+        overflow: hidden;
       }
 
       .sidebar p .github {
@@ -175,6 +176,31 @@
 
       html.is-animating .transition-fade {
           opacity: 0;
+      }
+
+      .row .sidebar .extra {
+        position: absolute;
+        text-align: center;
+        left: 18%;
+        bottom: -5%;
+        font-size: 2vh;
+        display: block;
+        color: white;
+        z-index: 2;
+        overflow: hidden;
+      }
+
+      .row .sidebar .extra a {
+          display: inline;
+          font-size: 2vh;
+          padding-left: 3px;
+          padding-right: 3px;
+          transition: 0s;
+      }
+
+      .row .sidebar .extra a:hover {
+        color: rgb(233, 233, 233);
+        text-decoration: underline;
       }
 
       @media only screen and (min-width: 1850px) {
@@ -253,6 +279,7 @@
                         <a class="courses" href="{{ route('courses.course') }}"><i class="fab fa-discourse"></i> Courses</a>
                         <a class="quizzes" href="{{ route('courses.quiz') }}"><i class="fas fa-sticky-note"></i> Quizzes</a>
                         <p>Wanna improve our website? <a class="github" href="https://github.com/Kidspiration/Kidspiration-Website" target="_blank">Visit our <i class="fab fa-github"></i> GitHub</a></p>
+                        <p class="extra"><a class="about" href="#">About Us</a>|<a class="copyright" href="#">Copyright</a>|<a class="support" href="#">Support</a></p>
                         {{-- <div>
                             <a class="logout" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();

@@ -72,6 +72,10 @@
           width: 50%;
       }
 
+      .content form .form-group .course {
+          width: 35%;
+      }
+
        form .form-group .form-control {
           margin-bottom: 1vh;
       }
@@ -94,7 +98,7 @@
       }
 
       .main .content #name {
-          width: 75vh;
+          width: 105vh;
       }
 
       .input-group label {
@@ -275,6 +279,24 @@
                         class="name form-control @error('name') is-invalid @enderror"
                         id="name" name="name" value="{{ old('name') }}" placeholder="Name your course">
                         @error('name')
+                          <div class="text-danger">{{ $message }}</div>
+                        @enderror
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text"
+                        class="course form-control @error('course') is-invalid @enderror"
+                        id="course" name="course" value="{{ old('course') }}" placeholder="For example A1, B2, etc">
+                        @error('course')
+                          <div class="text-danger">{{ $message }}</div>
+                        @enderror
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text"
+                        class="writer form-control @error('writer') is-invalid @enderror"
+                        id="writer" name="writer" value="{{ old('writer') }}" placeholder="Written by">
+                        @error('writer')
                           <div class="text-danger">{{ $message }}</div>
                         @enderror
                     </div>

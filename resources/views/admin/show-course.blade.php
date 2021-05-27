@@ -186,7 +186,7 @@
           font-size: 2.3vh;
           left: 18%;
           margin-top: 3.5%;
-          max-width: 500px;
+          max-width: 900px;
           bottom: 0;
           font-weight: lighter;
       }
@@ -227,7 +227,7 @@
           font-size: 2.3vh;
           left: 18%;
           margin-top: 2.3%;
-          max-width: 500px;
+          width: 900px;
           bottom: 0;
           font-weight: lighter;
       }
@@ -331,9 +331,13 @@
                     <p class="material">{!! $course->material_1 !!}</p>
 
 
-        <div class="bottom">
-            <h4 class="writers">Written by {{ $course->writer }}</h4>
-        </div>
+                    <div class="bottom">
+                        <h4 class="writers">Written by {{ $course->writer }} | Created at {{ Carbon\Carbon::parse($course->created_at)->format('g:i A l jS F Y') }}
+                            @if ($course->updated_at != $course->created_at)
+                                | Updated at {{ Carbon\Carbon::parse($course->updated_at)->format('g:i A l jS F Y') }}
+                            @endif
+                        </h4>
+                    </div>
                 </div>
             </div>
         </div>

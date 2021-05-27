@@ -176,7 +176,8 @@ class CourseController extends Controller
             'writer' => $request->writer,
             'course' => $request->course,
             'image_1' => $request->image_1,
-            'material_1' => $request->material_1
+            'material_1' => $request->material_1,
+            'updated_at' => DB::raw('now()'),
         ]);
 
         return redirect()->route('courses.show', ['course' => $id])

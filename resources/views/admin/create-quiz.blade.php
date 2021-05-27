@@ -23,6 +23,7 @@
 
       .main .content {
           max-width: 100vh;
+          font-family: 'Titillium Web', sans-serif;
       }
 
       .main .content a {
@@ -44,6 +45,7 @@
       }
 
        .content form .form-group .option {
+          margin-top: 2vh;
           margin-left: 3vh;
       }
 
@@ -92,7 +94,20 @@
       }
 
       .quiz-correct #abc {
+          margin-left: 3vh;
           margin-right: 3vh;
+          margin-bottom: 7vh;
+      }
+
+      .main .content .insert {
+          margin-top: 3vh;
+          margin-bottom: 3vh;
+          font-size: 4vh;
+      }
+
+      .form-group .name {
+          font-size: 4vh;
+          width: 105vh;
       }
 
       @media only screen and (max-width: 1849px) {
@@ -218,21 +233,53 @@
 
                         <div class="form-group">
                             <input type="text"
-                            class="form-control @error('name') is-invalid @enderror"
+                            class="name form-control @error('name') is-invalid @enderror"
                             id="name" name="name" value="{{ old('name') }}" placeholder="Name your quiz">
                             @error('name')
                               <div class="text-danger">{{ $message }}</div>
                             @enderror
                         </div>
 
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                             <input type="text"
                             class="number form-control @error('quiz_1') is-invalid @enderror"
                             id="quiz_1" name="quiz_1" value="{{ old('quiz_1') }}" placeholder="Quiz number 1">
                             @error('quiz_1')
                               <div class="text-danger">{{ $message }}</div>
                             @enderror
+                        </div> --}}
+
+                        <div class="insert form-group">
+                            <label for="berkas">Insert Image for Quiz 1 </label>
+                            <input type="file" class="form-control-file" id="image_1" name="image_1" value="{{ old('image_1') }}">
+                            @error('image_1')
+                                <div class="text-danger">{{ $message }}</div>
+                            @enderror
                         </div>
+
+                        <textarea id="summernote" name="quiz_1"></textarea>
+
+                        <script>
+                            $(document).ready(function() {
+                                $('#summernote').summernote({
+                                    placeholder: 'Input quiz 1 here',
+                                    tabsize: 2,
+                                    height: 175,
+                                    width: 850,
+                                    fontSizes: ['8', '9', '10', '11', '12', '13', '14', '16', '20', '24', '28', '36'],
+                                    toolbar: [
+                                        ['style', ['style']],
+                                        ['font', ['bold', 'underline', 'clear']],
+                                        ['fontsize', ['fontsize']],
+                                        ['color', ['color']],
+                                        ['para', ['ul', 'ol', 'paragraph']],
+                                        ['table', ['table']],
+                                        ['insert', ['link','picture']],
+                                        ['view', ['fullscreen', 'codeview', 'help']]
+                                    ]
+                                });
+                            });
+                        </script>
 
                         <div class="form-group">
                             <input type="text"
@@ -320,14 +367,46 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                             <input type="text"
                             class="number form-control @error('quiz_2') is-invalid @enderror"
                             id="quiz_2" name="quiz_2" value="{{ old('quiz_2') }}" placeholder="Quiz number 2">
                             @error('quiz_2')
                               <div class="text-danger">{{ $message }}</div>
                             @enderror
+                        </div> --}}
+
+                        <div class="insert form-group">
+                            <label for="berkas">Insert Image for Quiz 2 </label>
+                            <input type="file" class="form-control-file" id="image_2" name="image_2" value="{{ old('image_2') }}">
+                            @error('image_2')
+                                <div class="text-danger">{{ $message }}</div>
+                            @enderror
                         </div>
+
+                        <textarea id="quiz2" name="quiz_2"></textarea>
+
+                        <script>
+                            $(document).ready(function() {
+                                $('#quiz2').summernote({
+                                    placeholder: 'Input quiz 2 here',
+                                    tabsize: 2,
+                                    height: 175,
+                                    width: 850,
+                                    fontSizes: ['8', '9', '10', '11', '12', '13', '14', '16', '20', '24', '28', '36'],
+                                    toolbar: [
+                                        ['style', ['style']],
+                                        ['font', ['bold', 'underline', 'clear']],
+                                        ['fontsize', ['fontsize']],
+                                        ['color', ['color']],
+                                        ['para', ['ul', 'ol', 'paragraph']],
+                                        ['table', ['table']],
+                                        ['insert', ['link','picture']],
+                                        ['view', ['fullscreen', 'codeview', 'help']]
+                                    ]
+                                });
+                            });
+                        </script>
 
                         <div class="form-group">
                             <input type="text"
@@ -415,14 +494,46 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                             <input type="text"
                             class="number form-control @error('quiz_3') is-invalid @enderror"
                             id="quiz_3" name="quiz_3" value="{{ old('quiz_3') }}" placeholder="Quiz number 3">
                             @error('quiz_3')
                               <div class="text-danger">{{ $message }}</div>
                             @enderror
+                        </div> --}}
+
+                        <div class="insert form-group">
+                            <label for="berkas">Insert Image for Quiz 3 </label>
+                            <input type="file" class="form-control-file" id="image_3" name="image_3" value="{{ old('image_3') }}">
+                            @error('image_3')
+                                <div class="text-danger">{{ $message }}</div>
+                            @enderror
                         </div>
+
+                        <textarea id="quiz3" name="quiz_3"></textarea>
+
+                        <script>
+                            $(document).ready(function() {
+                                $('#quiz3').summernote({
+                                    placeholder: 'Input quiz 3 here',
+                                    tabsize: 2,
+                                    height: 175,
+                                    width: 850,
+                                    fontSizes: ['8', '9', '10', '11', '12', '13', '14', '16', '20', '24', '28', '36'],
+                                    toolbar: [
+                                        ['style', ['style']],
+                                        ['font', ['bold', 'underline', 'clear']],
+                                        ['fontsize', ['fontsize']],
+                                        ['color', ['color']],
+                                        ['para', ['ul', 'ol', 'paragraph']],
+                                        ['table', ['table']],
+                                        ['insert', ['link','picture']],
+                                        ['view', ['fullscreen', 'codeview', 'help']]
+                                    ]
+                                });
+                            });
+                        </script>
 
                         <div class="form-group">
                             <input type="text"
@@ -510,14 +621,46 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                             <input type="text"
                             class="number form-control @error('quiz_4') is-invalid @enderror"
                             id="quiz_4" name="quiz_4" value="{{ old('quiz_4') }}" placeholder="Quiz number 4">
                             @error('quiz_4')
                               <div class="text-danger">{{ $message }}</div>
                             @enderror
+                        </div> --}}
+
+                        <div class="insert form-group">
+                            <label for="berkas">Insert Image for Quiz 4 </label>
+                            <input type="file" class="form-control-file" id="image_4" name="image_4" value="{{ old('image_4') }}">
+                            @error('image_4')
+                                <div class="text-danger">{{ $message }}</div>
+                            @enderror
                         </div>
+
+                        <textarea id="quiz4" name="quiz_4"></textarea>
+
+                        <script>
+                            $(document).ready(function() {
+                                $('#quiz4').summernote({
+                                    placeholder: 'Input quiz 4 here',
+                                    tabsize: 2,
+                                    height: 175,
+                                    width: 850,
+                                    fontSizes: ['8', '9', '10', '11', '12', '13', '14', '16', '20', '24', '28', '36'],
+                                    toolbar: [
+                                        ['style', ['style']],
+                                        ['font', ['bold', 'underline', 'clear']],
+                                        ['fontsize', ['fontsize']],
+                                        ['color', ['color']],
+                                        ['para', ['ul', 'ol', 'paragraph']],
+                                        ['table', ['table']],
+                                        ['insert', ['link','picture']],
+                                        ['view', ['fullscreen', 'codeview', 'help']]
+                                    ]
+                                });
+                            });
+                        </script>
 
                         <div class="form-group">
                             <input type="text"
@@ -605,14 +748,38 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                             <input type="text"
                             class="number form-control @error('quiz_5') is-invalid @enderror"
                             id="quiz_5" name="quiz_5" value="{{ old('quiz_5') }}" placeholder="Quiz number 5">
                             @error('quiz_5')
                               <div class="text-danger">{{ $message }}</div>
                             @enderror
-                        </div>
+                        </div> --}}
+
+                        <textarea id="quiz5" name="quiz_5"></textarea>
+
+                        <script>
+                            $(document).ready(function() {
+                                $('#quiz5').summernote({
+                                    placeholder: 'Input quiz 5 here',
+                                    tabsize: 2,
+                                    height: 175,
+                                    width: 850,
+                                    fontSizes: ['8', '9', '10', '11', '12', '13', '14', '16', '20', '24', '28', '36'],
+                                    toolbar: [
+                                        ['style', ['style']],
+                                        ['font', ['bold', 'underline', 'clear']],
+                                        ['fontsize', ['fontsize']],
+                                        ['color', ['color']],
+                                        ['para', ['ul', 'ol', 'paragraph']],
+                                        ['table', ['table']],
+                                        ['insert', ['link','picture']],
+                                        ['view', ['fullscreen', 'codeview', 'help']]
+                                    ]
+                                });
+                            });
+                        </script>
 
                         <div class="form-group">
                             <input type="text"
@@ -698,14 +865,38 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                             <input type="text"
                             class="number form-control @error('quiz_6') is-invalid @enderror"
                             id="quiz_6" name="quiz_6" value="{{ old('quiz_6') }}" placeholder="Quiz number 6">
                             @error('quiz_6')
                               <div class="text-danger">{{ $message }}</div>
                             @enderror
-                        </div>
+                        </div> --}}
+
+                        <textarea id="quiz6" name="quiz_6"></textarea>
+
+                        <script>
+                            $(document).ready(function() {
+                                $('#quiz6').summernote({
+                                    placeholder: 'Input quiz 6 here',
+                                    tabsize: 2,
+                                    height: 175,
+                                    width: 850,
+                                    fontSizes: ['8', '9', '10', '11', '12', '13', '14', '16', '20', '24', '28', '36'],
+                                    toolbar: [
+                                        ['style', ['style']],
+                                        ['font', ['bold', 'underline', 'clear']],
+                                        ['fontsize', ['fontsize']],
+                                        ['color', ['color']],
+                                        ['para', ['ul', 'ol', 'paragraph']],
+                                        ['table', ['table']],
+                                        ['insert', ['link','picture']],
+                                        ['view', ['fullscreen', 'codeview', 'help']]
+                                    ]
+                                });
+                            });
+                        </script>
 
                         <div class="form-group">
                             <input type="text"
@@ -791,14 +982,38 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                             <input type="text"
                             class="number form-control @error('quiz_7') is-invalid @enderror"
                             id="quiz_7" name="quiz_7" value="{{ old('quiz_7') }}" placeholder="Quiz number 7">
                             @error('quiz_7')
                               <div class="text-danger">{{ $message }}</div>
                             @enderror
-                        </div>
+                        </div> --}}
+
+                        <textarea id="quiz7" name="quiz_7"></textarea>
+
+                        <script>
+                            $(document).ready(function() {
+                                $('#quiz7').summernote({
+                                    placeholder: 'Input quiz 7 here',
+                                    tabsize: 2,
+                                    height: 175,
+                                    width: 850,
+                                    fontSizes: ['8', '9', '10', '11', '12', '13', '14', '16', '20', '24', '28', '36'],
+                                    toolbar: [
+                                        ['style', ['style']],
+                                        ['font', ['bold', 'underline', 'clear']],
+                                        ['fontsize', ['fontsize']],
+                                        ['color', ['color']],
+                                        ['para', ['ul', 'ol', 'paragraph']],
+                                        ['table', ['table']],
+                                        ['insert', ['link','picture']],
+                                        ['view', ['fullscreen', 'codeview', 'help']]
+                                    ]
+                                });
+                            });
+                        </script>
 
                         <div class="form-group">
                             <input type="text"
@@ -884,14 +1099,38 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                             <input type="text"
                             class="number form-control @error('quiz_8') is-invalid @enderror"
                             id="quiz_8" name="quiz_8" value="{{ old('quiz_8') }}" placeholder="Quiz number 8">
                             @error('quiz_8')
                               <div class="text-danger">{{ $message }}</div>
                             @enderror
-                        </div>
+                        </div> --}}
+
+                        <textarea id="quiz8" name="quiz_8"></textarea>
+
+                        <script>
+                            $(document).ready(function() {
+                                $('#quiz8').summernote({
+                                    placeholder: 'Input quiz 8 here',
+                                    tabsize: 2,
+                                    height: 175,
+                                    width: 850,
+                                    fontSizes: ['8', '9', '10', '11', '12', '13', '14', '16', '20', '24', '28', '36'],
+                                    toolbar: [
+                                        ['style', ['style']],
+                                        ['font', ['bold', 'underline', 'clear']],
+                                        ['fontsize', ['fontsize']],
+                                        ['color', ['color']],
+                                        ['para', ['ul', 'ol', 'paragraph']],
+                                        ['table', ['table']],
+                                        ['insert', ['link','picture']],
+                                        ['view', ['fullscreen', 'codeview', 'help']]
+                                    ]
+                                });
+                            });
+                        </script>
 
                         <div class="form-group">
                             <input type="text"
@@ -977,14 +1216,39 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                             <input type="text"
                             class="number form-control @error('quiz_9') is-invalid @enderror"
                             id="quiz_9" name="quiz_9" value="{{ old('quiz_9') }}" placeholder="Quiz number 9">
                             @error('quiz_9')
                               <div class="text-danger">{{ $message }}</div>
                             @enderror
-                        </div>
+                        </div> --}}
+
+                        <textarea id="quiz9" name="quiz_9"></textarea>
+
+                        <script>
+                            $(document).ready(function() {
+                                $('#quiz9').summernote({
+                                    placeholder: 'Input quiz 9 here',
+                                    tabsize: 2,
+                                    height: 175,
+                                    width: 850,
+                                    fontSizes: ['8', '9', '10', '11', '12', '13', '14', '16', '20', '24', '28', '36'],
+                                    toolbar: [
+                                        ['style', ['style']],
+                                        ['font', ['bold', 'underline', 'clear']],
+                                        ['fontsize', ['fontsize']],
+                                        ['color', ['color']],
+                                        ['para', ['ul', 'ol', 'paragraph']],
+                                        ['table', ['table']],
+                                        ['insert', ['link','picture']],
+                                        ['view', ['fullscreen', 'codeview', 'help']]
+                                    ]
+                                });
+                            });
+                        </script>
+
                         <div class="form-group">
                             <input type="text"
                             class="option form-control @error('quiz_9_option1') is-invalid @enderror"
@@ -1069,14 +1333,38 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                             <input type="text"
                             class="number form-control @error('quiz_10') is-invalid @enderror"
                             id="quiz_10" name="quiz_10" value="{{ old('quiz_10') }}" placeholder="Quiz number 10">
                             @error('quiz_10')
                               <div class="text-danger">{{ $message }}</div>
                             @enderror
-                        </div>
+                        </div> --}}
+
+                        <textarea id="quiz10" name="quiz_10"></textarea>
+
+                        <script>
+                            $(document).ready(function() {
+                                $('#quiz10').summernote({
+                                    placeholder: 'Input quiz 10 here',
+                                    tabsize: 2,
+                                    height: 175,
+                                    width: 850,
+                                    fontSizes: ['8', '9', '10', '11', '12', '13', '14', '16', '20', '24', '28', '36'],
+                                    toolbar: [
+                                        ['style', ['style']],
+                                        ['font', ['bold', 'underline', 'clear']],
+                                        ['fontsize', ['fontsize']],
+                                        ['color', ['color']],
+                                        ['para', ['ul', 'ol', 'paragraph']],
+                                        ['table', ['table']],
+                                        ['insert', ['link','picture']],
+                                        ['view', ['fullscreen', 'codeview', 'help']]
+                                    ]
+                                });
+                            });
+                        </script>
 
                         <div class="form-group">
                             <input type="text"

@@ -315,11 +315,13 @@
                         $('#summernote').summernote({
                           placeholder: 'Input the materials here',
                           tabsize: 2,
-                          height: 100,
-                          width: 750,
+                          height: 500,
+                          width: 850,
+                          fontSizes: ['8', '9', '10', '11', '12', '13', '14', '16', '20', '24', '28', '36'],
                           toolbar: [
                             ['style', ['style']],
                             ['font', ['bold', 'underline', 'clear']],
+                            ['fontsize', ['fontsize']],
                             ['color', ['color']],
                             ['para', ['ul', 'ol', 'paragraph']],
                             ['table', ['table']],

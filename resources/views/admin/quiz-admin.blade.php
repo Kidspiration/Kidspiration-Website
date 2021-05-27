@@ -1,5 +1,5 @@
 @extends('layout/master')
-@section('title','Kidspiration Quizzes')
+@section('title', 'Kidspiration Courses 1st Grade')
 
 @section('content')
     <style>
@@ -15,14 +15,14 @@
 
         .animated.fadeInUp {
             animation-duration: .7s;
-            animation-delay: 1s;
+            animation-delay: .8s;
         }
 
         body {
-            background-image: linear-gradient(rgba(255, 255, 255, 0.527),rgba(255, 255, 255, 0.534)), url(img/bg4.jpg);
+            background-image: linear-gradient(rgba(255, 255, 255, 0.698),rgba(255, 255, 255, 0.678)), url(/img/bg7.jpg);
             background-position: center;
-
-
+            background-size: cover;
+            height: 100%;
         }
 
       .main {
@@ -33,13 +33,20 @@
         top: 3vh;
         left: 7vh;
         right: 10vh;
-
         box-sizing: border-box;
 
       }
 
       .main .content {
           max-width: 100vh;
+          position: relative;
+        /* font-family: 'Acme', sans-serif; */
+        /* font-family: 'Courgette', cursive; */
+        /* font-family: 'Farro', sans-serif; */
+        /* font-family: 'Indie Flower', cursive; */
+        /* font-family: 'Kalam', cursive; */
+        font-family: 'Pangolin', cursive;
+        /* font-family: 'Titillium Web', sans-serif; */
       }
 
       .main .content .quiz {
@@ -55,6 +62,8 @@
         border-radius: 1vh;
         background: white;
         color: rgb(78, 175, 255);
+        font-size: 4vh;
+        width: 120vh;
       }
 
       .main .content .quiz:hover {
@@ -115,7 +124,10 @@
 
       .main .content .logout {
           position: fixed;
-          right: 5%;
+          right: 0%;
+          font-size: 3vh;
+          padding: 1vh 2vh 1vh 2vh ;
+          text-decoration: none;
       }
 
       @media only screen and (min-width: 1850px) {
@@ -128,10 +140,14 @@
         }
 
         .main .content {
-          position: fixed;
-          left: 32%;
+          position: relative;
+          left: 7%;
           right: 10%;
-          top: 12%;
+          top: 5%;
+        }
+
+        .main .content .quiz {
+            width: 100vh;
         }
       }
 
@@ -167,10 +183,11 @@
         }
 
         .main .content {
-          position: fixed;
-          left: 35%;
-          right: 10%;
-          top: 12%;
+          position: relative;
+          left: 7%;
+          right: 7%;
+          top: 3%;
+          margin-bottom: 14%;
         }
 
         .bottombar {
@@ -229,7 +246,7 @@
                     <a class="logout" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();">
-                        {{ __('Logout') }}
+                        <i class="fas fa-sign-out-alt"></i> {{ __('Logout') }}
                     </a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                         @csrf
@@ -247,17 +264,11 @@
                     <tbody>
                         @forelse ($quizzes as $quiz)
                         <tr>
-                            <td><a name="" id="" class="quiz btn btn-primary" href="{{route('quizzes.showAdmin',['quiz' => $quiz->id])}}" role="button">{{ $quiz->name }}</a></td>
-                            {{-- <td><a name="" id="" class="edit btn btn-primary" href="{{ route('quizzes.edit',['quiz' => $quiz->name]) }}" role="button">Edit</a></td> --}}
-                            {{-- <td>
-                               <form action="{{ route('quizzes.destroy',
-                                ['quiz' => $quiz->name]) }}" method="POST">
-                                @method('DELETE')
-                                @csrf
-                                <button type="submit" class="delete btn btn-danger">Delete</button>
-                                </form>
-                                <a name="" id="" class="delete btn btn-primary" href="/quiz-admin/delete/{{ $quiz->name }}" role="button">Delete</a>
-                            </td> --}}
+                            <td>
+                                <a name="" id="" class="quiz btn btn-primary"
+                                href="{{route('quizzes.showAdmin', ['quiz' => $quiz->id])}}"
+                                role="button">{{ $quiz->name }}</a>
+                            </td>
                         </tr>
                         @empty
                         @endforelse

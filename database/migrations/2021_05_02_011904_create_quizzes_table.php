@@ -17,6 +17,7 @@ class CreateQuizzesTable extends Migration
             $table->id();
             $table->string('grade')->nullable()->default(NULL);
             $table->string('name')->nullable()->default(NULL);
+            $table->string('writer')->nullable()->default(NULL);
             $table->string('quiz_1')->nullable()->default(NULL);
             $table->text('quiz_1_answer')->nullable()->default(NULL);
             $table->text('quiz_1_correct')->nullable()->default(NULL);

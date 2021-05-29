@@ -189,6 +189,7 @@
           max-width: 900px;
           bottom: 0;
           font-weight: lighter;
+          font-family: cursive;
       }
 
       @media only screen and (min-width: 1850px) {

@@ -24,24 +24,20 @@
       .main .content {
           max-width: 100vh;
           font-family: 'Titillium Web', sans-serif;
+          margin-bottom: 7vh;
       }
 
-      .main .content a {
-        display: block;
-        margin-bottom: 20px;
-        text-align: justify;
-        padding-left: 40px;
-        padding-top: 30px;
-        padding-bottom: 30px;
-        border: 1px solid rgb(78, 175, 255);
-        border-radius: 1vh;
-        background: white;
-        color: rgb(78, 175, 255);
+      .main .content .btn {
+          margin-top: 3vh;
+          margin-bottom: 3vh;
+          background: rgb(78, 175, 255);
+          color: white;
+          border: 1px solid rgb(78, 175, 255);
       }
 
-      .main .content a:hover {
-        background: rgb(78, 175, 255);
-        color: white;
+      .main .content .btn:hover {
+          background: white;
+          color: rgb(78, 175, 255);
       }
 
        .content form .form-group .option {
@@ -108,6 +104,27 @@
       .form-group .name {
           font-size: 4vh;
           width: 105vh;
+      }
+
+      .main .content .form-group .writer {
+          width: 150%;
+      }
+
+      @media only screen and (min-width: 1850px) {
+        .sidebar {
+            width: 23%;
+        }
+
+        .bottombar {
+            display: none;
+        }
+
+        .main .content {
+          position: relative;
+          left: 5%;
+          right: 10%;
+          top: 1%;
+        }
       }
 
       @media only screen and (max-width: 1849px) {
@@ -236,6 +253,15 @@
                             class="name form-control @error('name') is-invalid @enderror"
                             id="name" name="name" value="{{ old('name') }}" placeholder="Name your quiz">
                             @error('name')
+                              <div class="text-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text"
+                            class="writer form-control @error('writer') is-invalid @enderror"
+                            id="writer" name="writer" value="{{ old('writer') }}" placeholder="Written by">
+                            @error('writer')
                               <div class="text-danger">{{ $message }}</div>
                             @enderror
                         </div>
@@ -692,7 +718,7 @@
                         <div class="form-group">
                             <input type="text"
                             class="option form-control @error('quiz_4_option4') is-invalid @enderror"
-                            id="quiz_4_option4" name="quiz_4_option4" value="{{ old('quiz_1_option4') }}" placeholder="Fourth option">
+                            id="quiz_4_option4" name="quiz_4_option4" value="{{ old('quiz_4_option4') }}" placeholder="Fourth option">
                             @error('quiz_4_option4')
                               <div class="text-danger">{{ $message }}</div>
                             @enderror
@@ -701,7 +727,7 @@
                         <div class="form-group">
                             <input type="text"
                             class="option form-control @error('quiz_4_option5') is-invalid @enderror"
-                            id="quiz_4_option5" name="quiz_4_option5" value="{{ old('quiz_1_option5') }}" placeholder="Fifth option">
+                            id="quiz_4_option5" name="quiz_4_option5" value="{{ old('quiz_4_option5') }}" placeholder="Fifth option">
                             @error('quiz_4_option5')
                               <div class="text-danger">{{ $message }}</div>
                             @enderror
@@ -757,6 +783,14 @@
                             @enderror
                         </div> --}}
 
+                        <div class="insert form-group">
+                            <label for="berkas">Insert Image for Quiz 5 </label>
+                            <input type="file" class="form-control-file" id="image_5" name="image_5" value="{{ old('image_5') }}">
+                            @error('image_5')
+                                <div class="text-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
+
                         <textarea id="quiz5" name="quiz_5"></textarea>
 
                         <script>
@@ -793,7 +827,7 @@
                         <div class="form-group">
                             <input type="text"
                             class="option form-control @error('quiz_5_option2') is-invalid @enderror"
-                            id="quiz_5_option2" name="quiz_5_option2" value="{{ old('quiz_1_option2') }}" placeholder="Second option">
+                            id="quiz_5_option2" name="quiz_5_option2" value="{{ old('quiz_5_option2') }}" placeholder="Second option">
                             @error('quiz_5_option2')
                               <div class="text-danger">{{ $message }}</div>
                             @enderror
@@ -802,7 +836,7 @@
                         <div class="form-group">
                             <input type="text"
                             class="option form-control @error('quiz_5_option3') is-invalid @enderror"
-                            id="quiz_5_option3" name="quiz_5_option3" value="{{ old('quiz_1_option3') }}" placeholder="Third option">
+                            id="quiz_5_option3" name="quiz_5_option3" value="{{ old('quiz_5_option3') }}" placeholder="Third option">
                             @error('quiz_5_option3')
                               <div class="text-danger">{{ $message }}</div>
                             @enderror
@@ -811,7 +845,7 @@
                         <div class="form-group">
                             <input type="text"
                             class="option form-control @error('quiz_5_option4') is-invalid @enderror"
-                            id="quiz_5_option4" name="quiz_5_option4" value="{{ old('quiz_1_option4') }}" placeholder="Fourth option">
+                            id="quiz_5_option4" name="quiz_5_option4" value="{{ old('quiz_5_option4') }}" placeholder="Fourth option">
                             @error('quiz_5_option4')
                               <div class="text-danger">{{ $message }}</div>
                             @enderror
@@ -820,7 +854,7 @@
                         <div class="form-group">
                             <input type="text"
                             class="option form-control @error('quiz_5_option5') is-invalid @enderror"
-                            id="quiz_5_option5" name="quiz_5_option5" value="{{ old('quiz_1_option5') }}" placeholder="Fifth option">
+                            id="quiz_5_option5" name="quiz_5_option5" value="{{ old('quiz_5_option5') }}" placeholder="Fifth option">
                             @error('quiz_5_option5')
                               <div class="text-danger">{{ $message }}</div>
                             @enderror
@@ -873,6 +907,14 @@
                               <div class="text-danger">{{ $message }}</div>
                             @enderror
                         </div> --}}
+
+                        <div class="insert form-group">
+                            <label for="berkas">Insert Image for Quiz 6 </label>
+                            <input type="file" class="form-control-file" id="image_6" name="image_6" value="{{ old('image_6') }}">
+                            @error('image_6')
+                                <div class="text-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
 
                         <textarea id="quiz6" name="quiz_6"></textarea>
 
@@ -991,6 +1033,14 @@
                             @enderror
                         </div> --}}
 
+                        <div class="insert form-group">
+                            <label for="berkas">Insert Image for Quiz 7 </label>
+                            <input type="file" class="form-control-file" id="image_7" name="image_7" value="{{ old('image_7') }}">
+                            @error('image_7')
+                                <div class="text-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
+
                         <textarea id="quiz7" name="quiz_7"></textarea>
 
                         <script>
@@ -1107,6 +1157,14 @@
                               <div class="text-danger">{{ $message }}</div>
                             @enderror
                         </div> --}}
+
+                        <div class="insert form-group">
+                            <label for="berkas">Insert Image for Quiz 8 </label>
+                            <input type="file" class="form-control-file" id="image_8" name="image_8" value="{{ old('image_8') }}">
+                            @error('image_8')
+                                <div class="text-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
 
                         <textarea id="quiz8" name="quiz_8"></textarea>
 
@@ -1225,6 +1283,14 @@
                             @enderror
                         </div> --}}
 
+                        <div class="insert form-group">
+                            <label for="berkas">Insert Image for Quiz 9 </label>
+                            <input type="file" class="form-control-file" id="image_9" name="image_9" value="{{ old('image_9') }}">
+                            @error('image_9')
+                                <div class="text-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
+
                         <textarea id="quiz9" name="quiz_9"></textarea>
 
                         <script>
@@ -1341,6 +1407,14 @@
                               <div class="text-danger">{{ $message }}</div>
                             @enderror
                         </div> --}}
+
+                        <div class="insert form-group">
+                            <label for="berkas">Insert Image for Quiz 10 </label>
+                            <input type="file" class="form-control-file" id="image_10" name="image_10" value="{{ old('image_10') }}">
+                            @error('image_10')
+                                <div class="text-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
 
                         <textarea id="quiz10" name="quiz_10"></textarea>
 

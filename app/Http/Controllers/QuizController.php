@@ -16,7 +16,7 @@ class QuizController extends Controller
 
     public function quiz()
     {
-        $quizzes = Quiz::all();
+        $quizzes = Quiz::all()->sortBy('grade');
         return view ('admin.quiz-admin', ['quizzes' => $quizzes]);
     }
 
@@ -217,11 +217,55 @@ class QuizController extends Controller
 
     public function update(Request $request, $id)
     {
-        // $validateData = $request->validate
+        $validateData = $request->validate
+        ([
+            'image_1' => 'file|image|max:5000',
+            'image_2' => 'file|image|max:5000',
+            'image_3' => 'file|image|max:5000',
+            'image_4' => 'file|image|max:5000',
+            'image_5' => 'file|image|max:5000',
+            'image_6' => 'file|image|max:5000',
+            'image_7' => 'file|image|max:5000',
+            'image_8' => 'file|image|max:5000',
+            'image_9' => 'file|image|max:5000',
+            'image_10' => 'file|image|max:5000',
+        ]);
+
+        if ($request['image_1'] != NULL)
+            $request->image_1 = $validateData['image_1']->store('img','public');
+
+        if ($request['image_2'] != NULL)
+            $request->image_2 = $validateData['image_2']->store('img','public');
+
+        if ($request['image_3'] != NULL)
+            $request->image_3 = $validateData['image_3']->store('img','public');
+
+        if ($request['image_4'] != NULL)
+            $request->image_4 = $validateData['image_4']->store('img','public');
+
+        if ($request['image_5'] != NULL)
+            $request->image_5 = $validateData['image_5']->store('img','public');
+
+        if ($request['image_6'] != NULL)
+            $request->image_6 = $validateData['image_6']->store('img','public');
+
+        if ($request['image_7'] != NULL)
+            $request->image_7 = $validateData['image_7']->store('img','public');
+
+        if ($request['image_8'] != NULL)
+            $request->image_8 = $validateData['image_8']->store('img','public');
+
+        if ($request['image_9'] != NULL)
+            $request->image_9 = $validateData['image_9']->store('img','public');
+
+        if ($request['image_10'] != NULL)
+            $request->image_10 = $validateData['image_10']->store('img','public');
+
         DB::table('quizzes')->where('id', $id)->update
         ([
             'grade' => $request->grade,
             'name' => $request->name,
+            'writer' => $request->writer,
             'quiz_1' => $request->quiz_1,
             'quiz_1_option1' => $request->quiz_1_option1,
             'quiz_1_option2' => $request->quiz_1_option2,
@@ -292,6 +336,17 @@ class QuizController extends Controller
             'quiz_10_option4' => $request->quiz_10_option4,
             'quiz_10_option5' => $request->quiz_10_option5,
             'quiz_10_correct' => $request->quiz_10_correct,
+            'image_1' => $request->image_1,
+            'image_2' => $request->image_2,
+            'image_3' => $request->image_3,
+            'image_4' => $request->image_4,
+            'image_5' => $request->image_5,
+            'image_6' => $request->image_6,
+            'image_7' => $request->image_7,
+            'image_8' => $request->image_8,
+            'image_9' => $request->image_9,
+            'image_10' => $request->image_10,
+            'updated_at' => DB::raw('now()'),
             // 'grade' => 'required',
             // 'name' => 'required',
             // 'quiz_1' => 'required',
@@ -379,9 +434,19 @@ class QuizController extends Controller
     {
         $score = 0;
 
-        // $answer1 =  Quiz::where('id', $id)->first('quiz_1_correct');
-        // $answer2 =  Quiz::where('id', $id)->first('quiz_2_correct');
-        // $answer3 =  Quiz::where('id', $id)->first('quiz_3_correct');
+        // foreach below is broken and always fails
+
+        // foreach ($request as $quiz)
+        // {
+        //     $answer[$quiz] = DB::table('quizzes')
+        //     ->where('id', $id)
+        //     ->value('quiz_'.[$quiz].'_correct');
+
+        //     if ($request->quiz_[$quiz]_answer == $answer[$quiz])
+        //     {
+        //         $score += 10;
+        //     }
+        // }
 
         $answer1 = DB::table('quizzes')
             ->where('id', $id)
@@ -395,6 +460,34 @@ class QuizController extends Controller
             ->where('id', $id)
             ->value('quiz_3_correct');
 
+        $answer4 = DB::table('quizzes')
+            ->where('id', $id)
+            ->value('quiz_4_correct');
+
+        $answer5 = DB::table('quizzes')
+            ->where('id', $id)
+            ->value('quiz_5_correct');
+
+        $answer6 = DB::table('quizzes')
+            ->where('id', $id)
+            ->value('quiz_6_correct');
+
+        $answer7 = DB::table('quizzes')
+            ->where('id', $id)
+            ->value('quiz_7_correct');
+
+        $answer8 = DB::table('quizzes')
+            ->where('id', $id)
+            ->value('quiz_8_correct');
+
+        $answer9 = DB::table('quizzes')
+            ->where('id', $id)
+            ->value('quiz_9_correct');
+
+        $answer10 = DB::table('quizzes')
+            ->where('id', $id)
+            ->value('quiz_10_correct');
+
         if ($request->quiz_1_answer == $answer1)
         {
             $score += 10;
@@ -406,6 +499,41 @@ class QuizController extends Controller
         }
 
         if ($request->quiz_3_answer == $answer3)
+        {
+            $score += 10;
+        }
+
+        if ($request->quiz_4_answer == $answer4)
+        {
+            $score += 10;
+        }
+
+        if ($request->quiz_5_answer == $answer5)
+        {
+            $score += 10;
+        }
+
+        if ($request->quiz_6_answer == $answer6)
+        {
+            $score += 10;
+        }
+
+        if ($request->quiz_7_answer == $answer7)
+        {
+            $score += 10;
+        }
+
+        if ($request->quiz_8_answer == $answer8)
+        {
+            $score += 10;
+        }
+
+        if ($request->quiz_9_answer == $answer9)
+        {
+            $score += 10;
+        }
+
+        if ($request->quiz_10_answer == $answer10)
         {
             $score += 10;
         }

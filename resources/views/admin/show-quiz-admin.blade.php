@@ -89,6 +89,7 @@
             color: white;
             margin-top: 3vh;
             margin-bottom: 3vh;
+            font-family: 'Pangolin', cursive;
       }
 
       .main .content .btn:hover {
@@ -98,6 +99,81 @@
 
       .bottombar .quizzes {
         color: #ffffff;
+      }
+
+      .main .content .logout {
+          position: fixed;
+          right: 3%;
+          top: 6%;
+          font-size: 3vh;
+          padding: 1vh 2vh 1vh 2vh ;
+          text-decoration: none;
+          border: 1px solid rgb(78, 175, 255);
+          border-radius: 1vh;
+          background: white;
+          color: rgb(78, 175, 255);
+      }
+
+      .main .content .logout:hover {
+          background: rgb(78, 175, 255);
+          color: white;
+      }
+
+      .main .content h2 {
+        font-family: 'Kalam', cursive;
+        font-weight: 1000;
+        font-size: 7vh;
+        width: 150%;
+      }
+
+      .main .content h3, h4 {
+        font-family: 'Kalam', cursive;
+      }
+
+      .main .content p {
+          font-size: 4.5vh;
+          font-family: 'Pangolin', cursive;
+          margin-top: 2vh;
+      }
+
+      .main .content .question {
+          width: 150%;
+      }
+
+      .main .content .form-check-input {
+          margin-left: 0vh;
+          margin-right: 2vh;
+      }
+
+      .main .content .form-check-label {
+        font-family: 'Pangolin', cursive;
+        font-weight: lighter;
+      }
+
+      .bottom {
+          background: linear-gradient(rgb(61, 168, 255),rgb(78, 175, 255));
+          left: -25%;
+          right: -50%;
+          bottom: 0;
+          position: absolute;
+          width: 132.5%;
+          height: 100px;
+          z-index: -1;
+          margin-bottom: -200px;
+          color: white;
+          overflow: auto;
+      }
+
+      .bottom .writers {
+          position: relative;
+          z-index: 5;
+          font-size: 2.3vh;
+          left: 18%;
+          margin-top: 3.5%;
+          max-width: 900px;
+          bottom: 0;
+          font-weight: lighter;
+          font-family: cursive;
       }
 
       @media only screen and (min-width: 1850px) {
@@ -194,7 +270,16 @@
                         @method('DELETE')
                         @csrf
                         <button type="submit" class="btn btn-danger">Delete</button>
-                        {{-- <a name="" id="" class="delete btn btn-primary" href="/quiz-admin/delete/{{ $quiz->id }}" role="button">Delete</a> --}}
+                        <div>
+                            <a class="logout" href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
+                                <i class="fas fa-sign-out-alt"></i> {{ __('Logout') }}
+                            </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
+                        </div>
                     @endauth
                     <form action="{{ route('quizzes.check',
                     ['quiz' => $quiz->id]) }}" method="POST" enctype="multipart/form-data">
@@ -212,7 +297,7 @@
 
                     {{-- Quiz question #1 below --}}
 
-                    <p class="question">{{ $quiz->quiz_1 }}</p>
+                    <p class="question">{!! $quiz->quiz_1 !!}</p>
 
                     <div class="form-group">
                         <div>
@@ -266,7 +351,7 @@
 
                     {{-- Quiz question #2 below --}}
 
-                    <p class="question">{{ $quiz->quiz_2 }}</p>
+                    <p class="question">{!! $quiz->quiz_2 !!}</p>
 
                     <div class="form-group">
                         <div>
@@ -320,7 +405,7 @@
 
                     {{-- Quiz question #3 below --}}
 
-                    <p class="question">{{ $quiz->quiz_3 }}</p>
+                    <p class="question">{!! $quiz->quiz_3 !!}</p>
 
                     <div class="form-group">
                         <div>
@@ -376,7 +461,7 @@
 
                     @if ($quiz->quiz_4 != NULL)
 
-                        <p class="question">{{ $quiz->quiz_4 }}</p>
+                        <p class="question">{!! $quiz->quiz_4 !!}</p>
 
                         <div class="form-group">
                             <div>
@@ -434,7 +519,7 @@
 
                     @if ($quiz->quiz_5 != NULL)
 
-                        <p class="question">{{ $quiz->quiz_5 }}</p>
+                        <p class="question">{!! $quiz->quiz_5 !!}</p>
 
                         <div class="form-group">
                             <div>
@@ -492,7 +577,7 @@
 
                     @if ($quiz->quiz_6 != NULL)
 
-                        <p class="question">{{ $quiz->quiz_6 }}</p>
+                        <p class="question">{!! $quiz->quiz_6 !!}</p>
 
                         <div class="form-group">
                             <div>
@@ -550,7 +635,7 @@
 
                     @if ($quiz->quiz_7 != NULL)
 
-                        <p class="question">{{ $quiz->quiz_7 }}</p>
+                        <p class="question">{!! $quiz->quiz_7 !!}</p>
 
                         <div class="form-group">
                             <div>
@@ -608,7 +693,7 @@
 
                     @if ($quiz->quiz_8 != NULL)
 
-                        <p class="question">{{ $quiz->quiz_8 }}</p>
+                        <p class="question">{!! $quiz->quiz_8 !!}</p>
 
                         <div class="form-group">
                             <div>
@@ -666,7 +751,7 @@
 
                     @if ($quiz->quiz_9 != NULL)
 
-                        <p class="question">{{ $quiz->quiz_9 }}</p>
+                        <p class="question">{!! $quiz->quiz_9 !!}</p>
 
                         <div class="form-group">
                             <div>
@@ -724,7 +809,7 @@
 
                     @if ($quiz->quiz_10 != NULL)
 
-                        <p class="question">{{ $quiz->quiz_10 }}</p>
+                        <p class="question">{!! $quiz->quiz_10 !!}</p>
 
                         <div class="form-group">
                             <div>
@@ -779,6 +864,14 @@
                     @endif
                         <button type="submit" class="btn btn-primary mb-2">Check Result</button>
                     </form>
+
+                    <div class="bottom">
+                        <h4 class="writers">Written by {{ $quiz->writer }} | Created at {{ Carbon\Carbon::parse($quiz->created_at)->format('g:i A l jS F Y') }}
+                            @if ($quiz->updated_at != $quiz->created_at)
+                                | Updated at {{ Carbon\Carbon::parse($quiz->updated_at)->format('g:i A l jS F Y') }}
+                            @endif
+                        </h4>
+                    </div>
 
                 </div>
             </div>

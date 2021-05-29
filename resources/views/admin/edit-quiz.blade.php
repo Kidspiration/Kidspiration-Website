@@ -106,6 +106,10 @@
           width: 105vh;
       }
 
+      .form-group #id {
+          width: 27vh;
+      }
+
       .main .content .form-group .writer {
           width: 150%;
       }
@@ -266,6 +270,15 @@
                             <div class="text-danger">{{ $message }}</div>
                         @enderror
                     </div>
+
+                        <div class="form-group">
+                            <input type="text"
+                            class="name form-control @error('id') is-invalid @enderror"
+                            id="id" name="id" value="{{ old('id') ?? $quiz->id }}" placeholder="Your quiz ID">
+                            @error('id')
+                            <div class="text-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
 
                         <div class="form-group">
                             <input type="text"

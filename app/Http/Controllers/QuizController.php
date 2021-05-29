@@ -30,7 +30,8 @@ class QuizController extends Controller
         $validateData = $request->validate
         ([
             'grade' => 'required',
-            'name' => 'required',
+            'writer' => '',
+            'name' => 'required|unique:quizzes,name',
             'quiz_1' => 'required',
             'quiz_1_option1' => 'required',
             'quiz_1_option2' => '',
@@ -101,6 +102,16 @@ class QuizController extends Controller
             'quiz_10_option4' => '',
             'quiz_10_option5' => '',
             'quiz_10_correct' => '',
+            'image_1' => 'file|image|max:5000',
+            'image_2' => 'file|image|max:5000',
+            'image_3' => 'file|image|max:5000',
+            'image_4' => 'file|image|max:5000',
+            'image_5' => 'file|image|max:5000',
+            'image_6' => 'file|image|max:5000',
+            'image_7' => 'file|image|max:5000',
+            'image_8' => 'file|image|max:5000',
+            'image_9' => 'file|image|max:5000',
+            'image_10' => 'file|image|max:5000',
         ]);
 
         // Quiz::create($validateData);
@@ -108,6 +119,7 @@ class QuizController extends Controller
         $quiz = new Quiz();
         $quiz->grade = $validateData['grade'];
         $quiz->name = $validateData['name'];
+        $quiz->writer = $validateData['writer'];
 
         if ($request['image_1'] != NULL)
             $quiz->image_1 = $validateData['image_1']->store('img','public');
@@ -152,63 +164,90 @@ class QuizController extends Controller
         $quiz->quiz_2_option3 = $validateData['quiz_2_option3'];
         $quiz->quiz_2_option4 = $validateData['quiz_2_option4'];
         $quiz->quiz_2_option5 = $validateData['quiz_2_option5'];
-        $quiz->quiz_2_correct = $validateData['quiz_2_correct'];
+
+        if ($request['quiz_2_correct'] != NULL)
+            $quiz->quiz_2_correct = $validateData['quiz_2_correct'];
+
         $quiz->quiz_3 = $validateData['quiz_3'];
         $quiz->quiz_3_option1 = $validateData['quiz_3_option1'];
         $quiz->quiz_3_option2 = $validateData['quiz_3_option2'];
         $quiz->quiz_3_option3 = $validateData['quiz_3_option3'];
         $quiz->quiz_3_option4 = $validateData['quiz_3_option4'];
         $quiz->quiz_3_option5 = $validateData['quiz_3_option5'];
-        $quiz->quiz_3_correct = $validateData['quiz_3_correct'];
+
+        if ($request['quiz_3_correct'] != NULL)
+            $quiz->quiz_3_correct = $validateData['quiz_3_correct'];
+
         $quiz->quiz_4 = $validateData['quiz_4'];
         $quiz->quiz_4_option1 = $validateData['quiz_4_option1'];
         $quiz->quiz_4_option2 = $validateData['quiz_4_option2'];
         $quiz->quiz_4_option3 = $validateData['quiz_4_option3'];
         $quiz->quiz_4_option4 = $validateData['quiz_4_option4'];
         $quiz->quiz_4_option5 = $validateData['quiz_4_option5'];
-        $quiz->quiz_4_correct = $validateData['quiz_4_correct'];
+
+        if ($request['quiz_4_correct'] != NULL)
+            $quiz->quiz_4_correct = $validateData['quiz_4_correct'];
+
         $quiz->quiz_5 = $validateData['quiz_5'];
         $quiz->quiz_5_option1 = $validateData['quiz_5_option1'];
         $quiz->quiz_5_option2 = $validateData['quiz_5_option2'];
         $quiz->quiz_5_option3 = $validateData['quiz_5_option3'];
         $quiz->quiz_5_option4 = $validateData['quiz_5_option4'];
         $quiz->quiz_5_option5 = $validateData['quiz_5_option5'];
-        $quiz->quiz_5_correct = $validateData['quiz_5_correct'];
+
+        if ($request['quiz_5_correct'] != NULL)
+            $quiz->quiz_5_correct = $validateData['quiz_5_correct'];
+
         $quiz->quiz_6 = $validateData['quiz_6'];
         $quiz->quiz_6_option1 = $validateData['quiz_6_option1'];
         $quiz->quiz_6_option2 = $validateData['quiz_6_option2'];
         $quiz->quiz_6_option3 = $validateData['quiz_6_option3'];
         $quiz->quiz_6_option4 = $validateData['quiz_6_option4'];
         $quiz->quiz_6_option5 = $validateData['quiz_6_option5'];
-        $quiz->quiz_6_correct = $validateData['quiz_6_correct'];
+
+        if ($request['quiz_6_correct'] != NULL)
+            $quiz->quiz_6_correct = $validateData['quiz_6_correct'];
+
         $quiz->quiz_7 = $validateData['quiz_7'];
         $quiz->quiz_7_option1 = $validateData['quiz_7_option1'];
         $quiz->quiz_7_option2 = $validateData['quiz_7_option2'];
         $quiz->quiz_7_option3 = $validateData['quiz_7_option3'];
         $quiz->quiz_7_option4 = $validateData['quiz_7_option4'];
         $quiz->quiz_7_option5 = $validateData['quiz_7_option5'];
-        $quiz->quiz_7_correct = $validateData['quiz_7_correct'];
+
+        if ($request['quiz_7_correct'] != NULL)
+            $quiz->quiz_7_correct = $validateData['quiz_7_correct'];
+
         $quiz->quiz_8 = $validateData['quiz_8'];
         $quiz->quiz_8_option1 = $validateData['quiz_8_option1'];
         $quiz->quiz_8_option2 = $validateData['quiz_8_option2'];
         $quiz->quiz_8_option3 = $validateData['quiz_8_option3'];
         $quiz->quiz_8_option4 = $validateData['quiz_8_option4'];
         $quiz->quiz_8_option5 = $validateData['quiz_8_option5'];
-        $quiz->quiz_8_correct = $validateData['quiz_8_correct'];
+
+        if ($request['quiz_8_correct'] != NULL)
+            $quiz->quiz_8_correct = $validateData['quiz_8_correct'];
+
         $quiz->quiz_9 = $validateData['quiz_9'];
         $quiz->quiz_9_option1 = $validateData['quiz_9_option1'];
         $quiz->quiz_9_option2 = $validateData['quiz_9_option2'];
         $quiz->quiz_9_option3 = $validateData['quiz_9_option3'];
         $quiz->quiz_9_option4 = $validateData['quiz_9_option4'];
         $quiz->quiz_9_option5 = $validateData['quiz_9_option5'];
-        $quiz->quiz_9_correct = $validateData['quiz_9_correct'];
+
+        if ($request['quiz_9_correct'] != NULL)
+            $quiz->quiz_9_correct = $validateData['quiz_9_correct'];
+
         $quiz->quiz_10 = $validateData['quiz_10'];
         $quiz->quiz_10_option1 = $validateData['quiz_10_option1'];
         $quiz->quiz_10_option2 = $validateData['quiz_10_option2'];
         $quiz->quiz_10_option3 = $validateData['quiz_10_option3'];
         $quiz->quiz_10_option4 = $validateData['quiz_10_option4'];
         $quiz->quiz_10_option5 = $validateData['quiz_10_option5'];
-        $quiz->quiz_10_correct = $validateData['quiz_10_correct'];
+
+        if ($request['quiz_10_correct'] != NULL)
+            $quiz->quiz_10_correct = $validateData['quiz_10_correct'];
+
         $quiz->save();
 
         return redirect()->route('courses.quiz')
@@ -219,6 +258,8 @@ class QuizController extends Controller
     {
         $validateData = $request->validate
         ([
+            'id' => 'required|unique:quizzes,id,'.$id,
+            'name' => 'required|unique:quizzes,name,'.$id,
             'image_1' => 'file|image|max:5000',
             'image_2' => 'file|image|max:5000',
             'image_3' => 'file|image|max:5000',
@@ -264,6 +305,7 @@ class QuizController extends Controller
         DB::table('quizzes')->where('id', $id)->update
         ([
             'grade' => $request->grade,
+            'id' => $request->id,
             'name' => $request->name,
             'writer' => $request->writer,
             'quiz_1' => $request->quiz_1,
@@ -426,7 +468,7 @@ class QuizController extends Controller
         // Quiz::where('id', $request->id)->update($validateData);
         // $quiz->update($validateData);
         // return redirect()->route('courses.quiz');
-        return redirect()->route('quizzes.showAdmin', ['quiz' => $id])
+        return redirect()->route('quizzes.showAdmin', ['quiz' => $request->id])
             ->with('message', "{$request->name} updated successfully");
     }
 

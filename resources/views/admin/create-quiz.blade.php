@@ -239,9 +239,9 @@
                               <option id="grade" name="grade" value="A">A</option>
                               <option id="grade" name="grade" value="B">B</option>
                               <option id="grade" name="grade" value="C">C</option>
-                              <option id="grade" name="grade" value="D">E</option>
-                              <option id="grade" name="grade" value="E">F</option>
-                              <option id="grade" name="grade" value="F">G</option>
+                              <option id="grade" name="grade" value="D">D</option>
+                              <option id="grade" name="grade" value="E">E</option>
+                              <option id="grade" name="grade" value="F">F</option>
                             </select>
                             @error('grade')
                                 <div class="text-danger">{{ $message }}</div>

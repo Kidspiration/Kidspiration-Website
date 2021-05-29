@@ -1,5 +1,5 @@
 @extends('layout/master')
-@section('title', 'Kidspiration Courses 1st Grade')
+@section('title', 'Kidspiration Quizzes')
 
 @section('content')
     <style>
@@ -128,6 +128,12 @@
           font-size: 3vh;
           padding: 1vh 2vh 1vh 2vh ;
           text-decoration: none;
+      }
+
+      table tr td i {
+          position: fixed;
+          right: -13%;
+          font-size: 7vh;
       }
 
       @media only screen and (min-width: 1850px) {
@@ -267,7 +273,20 @@
                             <td>
                                 <a name="" id="" class="quiz btn btn-primary"
                                 href="{{route('quizzes.showAdmin', ['quiz' => $quiz->id])}}"
-                                role="button">{{ $quiz->name }}</a>
+                                role="button">{{ $quiz->name }}
+                                @if ( $quiz->grade == 'A' )
+                                    <i class="fas fa-dice-one"></i>
+                                @elseif ( $quiz->grade == 'B' )
+                                    <i class="fas fa-dice-two"></i>
+                                @elseif ( $quiz->grade == 'C' )
+                                    <i class="fas fa-dice-three"></i>
+                                @elseif ( $quiz->grade == 'D' )
+                                    <i class="fas fa-dice-four"></i>
+                                @elseif ( $quiz->grade == 'E' )
+                                    <i class="fas fa-dice-five"></i>
+                                @elseif ( $quiz->grade == 'F' )
+                                    <i class="fas fa-dice-six"></i>
+                                @endif</a>
                             </td>
                         </tr>
                         @empty

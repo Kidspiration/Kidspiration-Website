@@ -279,7 +279,7 @@
                         <a class="courses" href="{{ route('courses.course') }}"><i class="fab fa-discourse"></i> Courses</a>
                         <a class="quizzes" href="{{ route('courses.quiz') }}"><i class="fas fa-sticky-note"></i> Quizzes</a>
                         <p>Wanna improve our website? <a class="github" href="https://github.com/Kidspiration/Kidspiration-Website" target="_blank">Visit our <i class="fab fa-github"></i> GitHub</a></p>
-                        <p class="extra"><a class="about" href="#">About Us</a>|<a class="copyright" href="#">Copyright</a>|<a class="support" href="#">Support</a></p>
+                        <p class="extra"><a class="about" href="/about">About Us</a>|<a class="copyright" href="#">Copyright</a>|<a class="support" href="#">Support</a></p>
                         {{-- <div>
                             <a class="logout" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();

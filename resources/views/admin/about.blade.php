@@ -47,6 +47,11 @@
             margin-top: 7vh;
         }
 
+        .container .core {
+            animation-duration: .9s;
+            animation-delay: .5s;
+        }
+
         .container .frame1 {
             width: 50vh;
             height: 50vh;
@@ -70,6 +75,11 @@
             margin-left: 5vh;
         }
 
+        .containe2 .contributor {
+            animation-duration: .9s;
+            animation-delay: 2s;
+        }
+
         .container2 .frame4 {
             width: 50vh;
             height: 50vh;
@@ -84,6 +94,11 @@
             position: absolute;
             display: inline-block;
             right: 0;
+        }
+
+        .frame1 {
+            animation-duration: .7s;
+            animation-delay: 1s;
         }
 
         .frame1 .photo {
@@ -117,6 +132,11 @@
             color: white;
         }
 
+        .frame2 {
+            animation-duration: .7s;
+            animation-delay: 1.5s;
+        }
+
         .frame2 .photo {
             overflow: hidden;
             border-radius: 50vh;
@@ -145,6 +165,11 @@
         .frame2 .head h3 {
             text-align: center;
             color: white;
+        }
+
+        .frame3 {
+            animation-duration: .7s;
+            animation-delay: 2s;
         }
 
         .frame3 .photo {
@@ -177,6 +202,11 @@
             color: white;
         }
 
+        .frame4 {
+            animation-duration: .7s;
+            animation-delay: 2.5s;
+        }
+
         .frame4 .photo {
             overflow: hidden;
             border-radius: 50vh;
@@ -205,6 +235,11 @@
         .frame4 .head h3 {
             text-align: center;
             color: white;
+        }
+
+        .frame5 {
+            animation-duration: .7s;
+            animation-delay: 3s;
         }
 
         .frame5 .photo {
@@ -303,9 +338,9 @@
 </head>
 <body>
     <div class="main">
-        <h1 class="core">Core Team</h1>
+        <h1 class="core animated fadeIn">Core Team</h1>
         <div class="container">
-            <div class="frame1">
+            <div class="frame1 animated fadeInUp">
                 <div class="photo">
                     <img src="/img/frans.jpg" alt="">
                 </div>
@@ -314,16 +349,16 @@
                     <h3>Lead Developer</h3>
                 </div>
             </div>
-            <div class="frame2">
+            <div class="frame2 animated fadeInUp">
                 <div class="photo">
-                    <img src="/img/frans.jpg" alt="">
+                    <img src="/img/gifari.jpg" alt="">
                 </div>
                 <div class="head">
                     <h2>Gifari Asmara</h2>
                     <h3>Advisor & Designer</h3>
                 </div>
             </div>
-            <div class="frame3">
+            <div class="frame3 animated fadeInUp">
                 <div class="photo">
                     <img src="/img/salah.jpeg" alt="">
                 </div>
@@ -333,9 +368,9 @@
                 </div>
             </div>
         </div>
-        <h1 class="contributor">Contributors</h1>
+        <h1 class="contributor animated fadeIn">Contributors</h1>
         <div class="container2">
-            <div class="frame4">
+            <div class="frame4 animated fadeInUp">
                 <div class="photo">
                     <img src="/img/alif.jpg" alt="">
                 </div>
@@ -344,7 +379,7 @@
                     <h3>Materials Writer</h3>
                 </div>
             </div>
-            <div class="frame5">
+            <div class="frame5 animated fadeInUp">
                 <div class="photo">
                     <img src="/img/salsa.jpg" alt="">
                 </div>
@@ -380,7 +415,7 @@
                     <li><a href="{{ route('courses.course') }}">Courses</a></li> |
                     <li><a href="{{ route('courses.quiz') }}">Quizzes</a></li> |
                     <li><a href="#">Copyright</a></li> |
-                    <li><a href="#">Support</a></li>
+                    <li><a href="{{ route('support.index') }}">Support</a></li>
                 </ul>
                 <ul class="cp">
                     <li>&copy; Copyright Kidspiration 2021</li>

@@ -176,6 +176,68 @@
           font-family: cursive;
       }
 
+      .right-icon {
+          position: fixed;
+          bottom: 10%;
+          z-index: 10;
+      }
+
+      .right-icon .fas {
+          padding: 20%;
+          padding-top: 25%;
+      }
+
+      .right-icon .fa-users {
+        padding: 20%;
+          padding-left: 18%;
+          padding-top: 25%;
+      }
+
+      .right-icon .about, .support {
+          position: fixed;
+          right: 3%;
+          font-size: 5vh;
+          transition: .3s ease;
+          border: 1px solid rgb(78, 175, 255);
+      }
+
+      .right-icon .about:hover {
+        background: rgb(255, 255, 255);
+        color: rgb(78, 175, 255);
+      }
+
+      .right-icon .about {
+        width: 10vh;
+       height: 10vh;
+       color: white;
+       background: rgb(78, 175, 255);
+       border-radius: 50vh;
+       bottom: 17%;
+      }
+
+      .right-icon .support:hover {
+        background: rgb(255, 255, 255);
+        color: rgb(78, 175, 255);
+      }
+
+      .right-icon .support {
+       width: 10vh;
+       height: 10vh;
+       color: white;
+       background: rgb(78, 175, 255);
+       border-radius: 50vh;
+       bottom: 5%;
+    }
+
+    .main .content .image {
+          display: block;
+          text-align: center;
+          align-items: center;
+          width: 75%;
+          margin-top: 7vh;
+          margin-bottom: 7vh;
+      }
+
       @media only screen and (min-width: 1850px) {
         .sidebar {
             width: 23%;
@@ -258,8 +320,17 @@
         }
       }
     </style>
-
+        <div class="right-icon">
+            <a href="/about" class="about"><i class="fas fa-users"></i></a>
+            <a href="/support" class="support"><i class="fas fa-comments"></i></a>
+        </div>
         <div class="main col">
+            @if(session()->has('message'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ session()->get('message') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            @endif
             <div class="content">
                 <div class="col-md-6 col-xl-8">
                     @auth
@@ -285,17 +356,16 @@
                     ['quiz' => $quiz->id]) }}" method="POST" enctype="multipart/form-data">
                         @csrf
 
-                        @if(session()->has('message'))
-                        <div class="alert alert-success">
-                        {{ session()->get('message') }}
-                        </div>
-                        @endif
                     <h2>{{ $quiz->name }}</h2>
                     <h3>Grade: {{ $quiz->grade }}</h3>
                     <h3>ID: {{ $quiz->id }}</h3>
                     <hr>
 
                     {{-- Quiz question #1 below --}}
+
+                    @if ($quiz->image_1 != NULL)
+                        <img class="image" src={{asset('storage/' . $quiz->image_1)}} alt="Image_1">
+                    @endif
 
                     <p class="question">{!! $quiz->quiz_1 !!}</p>
 
@@ -351,6 +421,10 @@
 
                     {{-- Quiz question #2 below --}}
 
+                    @if ($quiz->image_2 != NULL)
+                        <img class="image" src={{asset('storage/' . $quiz->image_2)}} alt="Image_2">
+                    @endif
+
                     <p class="question">{!! $quiz->quiz_2 !!}</p>
 
                     <div class="form-group">
@@ -405,6 +479,10 @@
 
                     {{-- Quiz question #3 below --}}
 
+                    @if ($quiz->image_3 != NULL)
+                        <img class="image" src={{asset('storage/' . $quiz->image_3)}} alt="Image_3">
+                    @endif
+
                     <p class="question">{!! $quiz->quiz_3 !!}</p>
 
                     <div class="form-group">
@@ -458,6 +536,10 @@
                     </div>
 
                     {{-- Quiz question #4 below --}}
+
+                    @if ($quiz->image_4 != NULL)
+                        <img class="image" src={{asset('storage/' . $quiz->image_4)}} alt="Image_4">
+                    @endif
 
                     @if ($quiz->quiz_4 != NULL)
 
@@ -517,6 +599,10 @@
 
                     {{-- Quiz question #5 below --}}
 
+                    @if ($quiz->image_5 != NULL)
+                        <img class="image" src={{asset('storage/' . $quiz->image_5)}} alt="Image_5">
+                    @endif
+
                     @if ($quiz->quiz_5 != NULL)
 
                         <p class="question">{!! $quiz->quiz_5 !!}</p>
@@ -574,6 +660,10 @@
                     @endif
 
                     {{-- Quiz question #6 below --}}
+
+                    @if ($quiz->image_6 != NULL)
+                        <img class="image" src={{asset('storage/' . $quiz->image_6)}} alt="Image_6">
+                    @endif
 
                     @if ($quiz->quiz_6 != NULL)
 
@@ -633,6 +723,10 @@
 
                     {{-- Quiz question #7 below --}}
 
+                    @if ($quiz->image_7 != NULL)
+                        <img class="image" src={{asset('storage/' . $quiz->image_7)}} alt="Image_7">
+                    @endif
+
                     @if ($quiz->quiz_7 != NULL)
 
                         <p class="question">{!! $quiz->quiz_7 !!}</p>
@@ -690,6 +784,10 @@
                     @endif
 
                     {{-- Quiz question #8 below --}}
+
+                    @if ($quiz->image_8 != NULL)
+                        <img class="image" src={{asset('storage/' . $quiz->image_8)}} alt="Image_8">
+                    @endif
 
                     @if ($quiz->quiz_8 != NULL)
 
@@ -749,6 +847,10 @@
 
                     {{-- Quiz question #9 below --}}
 
+                    @if ($quiz->image_9 != NULL)
+                        <img class="image" src={{asset('storage/' . $quiz->image_9)}} alt="Image_9">
+                    @endif
+
                     @if ($quiz->quiz_9 != NULL)
 
                         <p class="question">{!! $quiz->quiz_9 !!}</p>
@@ -806,6 +908,10 @@
                     @endif
 
                     {{-- Quiz question #10 below --}}
+
+                    @if ($quiz->image_10 != NULL)
+                        <img class="image" src={{asset('storage/' . $quiz->image_10)}} alt="Image_10">
+                    @endif
 
                     @if ($quiz->quiz_10 != NULL)
 

@@ -7,6 +7,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
   <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <script src="/js/bootstrap.min.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
   <script src="https://kit.fontawesome.com/87c10079f1.js" crossorigin="anonymous"></script>
@@ -279,7 +280,7 @@
                         <a class="courses" href="{{ route('courses.course') }}"><i class="fab fa-discourse"></i> Courses</a>
                         <a class="quizzes" href="{{ route('courses.quiz') }}"><i class="fas fa-sticky-note"></i> Quizzes</a>
                         <p>Wanna improve our website? <a class="github" href="https://github.com/Kidspiration/Kidspiration-Website" target="_blank">Visit our <i class="fab fa-github"></i> GitHub</a></p>
-                        <p class="extra"><a class="about" href="/about">About Us</a>|<a class="copyright" href="#">Copyright</a>|<a class="support" href="#">Support</a></p>
+                        <p class="extra"><a class="about" href="/about">About Us</a>|<a class="copyright" href="#">Copyright</a>|<a class="support" href="{{ route('support.index') }}">Support</a></p>
                         {{-- <div>
                             <a class="logout" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\QuizController;
+use App\Http\Controllers\TempController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -93,3 +94,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/about', function () {
     return view('admin.about');
 });
+
+Route::post('/sendemail', [App\Http\Controllers\TempController::class, 'send'])->name('support.store');
+
+Route::get('/support', [App\Http\Controllers\TempController::class, 'index'])->name('support.index');
+

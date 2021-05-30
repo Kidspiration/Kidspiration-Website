@@ -192,6 +192,59 @@
           font-family: cursive;
       }
 
+      .right-icon {
+          position: fixed;
+          bottom: 10%;
+          z-index: 10;
+      }
+
+      .right-icon .fas {
+          padding: 20%;
+          padding-top: 25%;
+      }
+
+      .right-icon .fa-users {
+        padding: 20%;
+          padding-left: 18%;
+          padding-top: 25%;
+      }
+
+      .right-icon .about, .support {
+          position: fixed;
+          right: 3%;
+          font-size: 5vh;
+          transition: .3s ease;
+          border: 1px solid rgb(78, 175, 255);
+      }
+
+      .right-icon .about:hover {
+        background: rgb(255, 255, 255);
+        color: rgb(78, 175, 255);
+      }
+
+      .right-icon .about {
+        width: 10vh;
+       height: 10vh;
+       color: white;
+       background: rgb(78, 175, 255);
+       border-radius: 50vh;
+       bottom: 17%;
+      }
+
+      .right-icon .support:hover {
+        background: rgb(255, 255, 255);
+        color: rgb(78, 175, 255);
+      }
+
+      .right-icon .support {
+       width: 10vh;
+       height: 10vh;
+       color: white;
+       background: rgb(78, 175, 255);
+       border-radius: 50vh;
+       bottom: 5%;
+    }
+
       @media only screen and (min-width: 1850px) {
         .sidebar {
             width: 23%;
@@ -299,8 +352,17 @@
         }
       }
     </style>
-
+        <div class="right-icon">
+            <a href="/about" class="about"><i class="fas fa-users"></i></a>
+            <a href="/support" class="support"><i class="fas fa-comments"></i></a>
+        </div>
         <div class="main col">
+            @if(session()->has('message'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ session()->get('message') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            @endif
             <div class="content animated fadeInUp">
                 <div class="">
                     @auth
@@ -323,6 +385,7 @@
                             </form>
                         </div>
                     @endauth
+
                     <h1>{{ $course->name }}</h1>
 
                     @if ($course->image_1 != NULL)

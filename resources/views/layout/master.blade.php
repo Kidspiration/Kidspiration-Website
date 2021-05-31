@@ -182,7 +182,7 @@
       .row .sidebar .extra {
         position: absolute;
         text-align: center;
-        left: 18%;
+        left: 13%;
         bottom: -5%;
         font-size: 2vh;
         display: block;
@@ -194,9 +194,13 @@
       .row .sidebar .extra a {
           display: inline;
           font-size: 2vh;
-          padding-left: 3px;
-          padding-right: 3px;
+          padding-left: 1vh;
+          padding-right: 1vh;
           transition: 0s;
+      }
+
+      .row .sidebar .extra .support {
+        padding-left: 2vh;
       }
 
       .row .sidebar .extra a:hover {

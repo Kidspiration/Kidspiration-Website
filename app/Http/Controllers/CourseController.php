@@ -19,6 +19,12 @@ class CourseController extends Controller
     //     $this->middleware('auth')->except('index');
     // }
 
+    public function __construct()
+    {
+        // $this->middleware('auth');
+        $this->middleware('auth')->only('create','store','update','edit','destroy');
+    }
+
     public function index()
     {
         $courses = Course::all();

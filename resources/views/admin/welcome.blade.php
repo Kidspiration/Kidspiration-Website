@@ -154,6 +154,16 @@
         font-weight: 100;
     }
 
+    .cp {
+        position: absolute;
+        bottom: -33%;
+        left: 15%;
+    }
+
+    .cp li {
+        list-style: none;
+    }
+
     @media only screen and (min-width: 1850px) {
         .bg {
             width: 62%;
@@ -291,8 +301,11 @@
                     <p class="animated bounceInRight dua" >Are you still having problem</p>
                     <p class="animated bounceInRight tiga" >with English in elementary school?</p>
                     <p class="animated bounceInRight empat" >Take it easy, let's learn with us!!</p>
-                   <a class="animated fadeInUp btnAdmin btn btn-primary" type="button" href="/admin-login">Admin</a>
-                   <a class="animated fadeInUp btnStudent btn btn-primary" type="button" href="/welcome">Student</a>
+                    <a class="animated fadeInUp btnAdmin btn btn-primary" type="button" href="/admin-login">Admin</a>
+                    <a class="animated fadeInUp btnStudent btn btn-primary" type="button" href="/welcome">Student</a>
+                    <ul class="cp">
+                        <li>&copy; Copyright Kidspiration 2021</li>
+                    </ul>
                 </div>
             </div>
         </div>

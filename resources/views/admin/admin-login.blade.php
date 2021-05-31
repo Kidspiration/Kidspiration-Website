@@ -159,6 +159,16 @@
 
     }
 
+    .cp {
+        position: absolute;
+        bottom: -70%;
+        left: 10%;
+    }
+
+    .cp li {
+        list-style: none;
+    }
+
     @media only screen and (min-width: 1850px) {
         .bg {
             width: 63%;
@@ -289,6 +299,9 @@
                     <button type="submit" class="btn btn-primary mb-2 animated fadeInUp">
                         {{ __('Login') }}
                     </button>
+                    <ul class="cp">
+                        <li>&copy; Copyright Kidspiration 2021</li>
+                    </ul>
                   </form>
                 </div>
 

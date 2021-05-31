@@ -302,6 +302,12 @@
             <a href="/support" class="support"><i class="fas fa-comments"></i></a>
         </div>
         <div class="main col">
+            @if(session()->has('message'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ session()->get('message') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            @endif
             <div class="content animated fadeInUp">
                 @auth
                 <div>
@@ -316,12 +322,7 @@
                 </div>
                 <a name="" id="" class="add create btn btn-primary" href="{{ route('quizzes.create') }}" role="button">Create Quiz</a>
                 @endauth
-                @if(session()->has('message'))
-                <div class="alert alert-success alert-dismissible fade show" role="alert">
-                    {{ session()->get('message') }}
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-                @endif
+
                 <table>
                     <thead></thead>
                     <tbody>

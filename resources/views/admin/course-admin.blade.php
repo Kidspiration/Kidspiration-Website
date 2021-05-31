@@ -121,6 +121,30 @@
           text-decoration: none;
       }
 
+      .row .sidebar .extra {
+        position: absolute;
+        text-align: center;
+        left: 13%;
+        bottom: -5%;
+        font-size: 2vh;
+        display: block;
+        color: white;
+        z-index: 2;
+        overflow: hidden;
+      }
+
+      .row .sidebar .extra a {
+          display: inline;
+          font-size: 2vh;
+          padding-left: 1vh;
+          padding-right: 1vh;
+          transition: 0s;
+      }
+
+      .row .sidebar .extra .support {
+        padding-left: 1vh;
+      }
+
       @media only screen and (min-width: 1850px) {
         .sidebar {
             width: 23%;

@@ -40,9 +40,15 @@
           color: rgb(78, 175, 255);
       }
 
+      .content form .form-group .letter {
+          position: absolute;
+          font-size: 4vh;
+          margin-left: 3vh;
+      }
+
        .content form .form-group .option {
           margin-top: 2vh;
-          margin-left: 3vh;
+          margin-left: 7vh;
       }
 
       .content form .form-group .answer {
@@ -108,6 +114,10 @@
 
       .main .content .form-group .writer {
           width: 150%;
+      }
+
+        .row .sidebar .extra .support {
+        padding-left: 1vh;
       }
 
       @media only screen and (min-width: 1850px) {
@@ -308,6 +318,7 @@
                         </script>
 
                         <div class="form-group">
+                            <label for="" class="letter">A</label>
                             <input type="text"
                             class="option form-control @error('quiz_1_option1') is-invalid @enderror"
                             id="quiz_1_option1" name="quiz_1_option1" value="{{ old('quiz_1_option1') }}" placeholder="First option">
@@ -317,6 +328,7 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="" class="letter">B</label>
                             <input type="text"
                             class="option form-control @error('quiz_1_option2') is-invalid @enderror"
                             id="quiz_1_option2" name="quiz_1_option2" value="{{ old('quiz_1_option2') }}" placeholder="Second option">
@@ -326,6 +338,7 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="" class="letter">C</label>
                             <input type="text"
                             class="option form-control @error('quiz_1_option3') is-invalid @enderror"
                             id="quiz_1_option3" name="quiz_1_option3" value="{{ old('quiz_1_option3') }}" placeholder="Third option">
@@ -335,6 +348,7 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="" class="letter">D</label>
                             <input type="text"
                             class="option form-control @error('quiz_1_option4') is-invalid @enderror"
                             id="quiz_1_option4" name="quiz_1_option4" value="{{ old('quiz_1_option4') }}" placeholder="Fourth option">
@@ -344,6 +358,7 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="" class="letter">E</label>
                             <input type="text"
                             class="option form-control @error('quiz_1_option5') is-invalid @enderror"
                             id="quiz_1_option5" name="quiz_1_option5" value="{{ old('quiz_1_option5') }}" placeholder="Fifth option">
@@ -435,6 +450,7 @@
                         </script>
 
                         <div class="form-group">
+                            <label for="" class="letter">A</label>
                             <input type="text"
                             class="option form-control @error('quiz_2_option1') is-invalid @enderror"
                             id="quiz_2_option1" name="quiz_2_option1" value="{{ old('quiz_2_option1') }}" placeholder="First option">
@@ -444,6 +460,7 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="" class="letter">B</label>
                             <input type="text"
                             class="option form-control @error('quiz_2_option2') is-invalid @enderror"
                             id="quiz_2_option2" name="quiz_2_option2" value="{{ old('quiz_2_option2') }}" placeholder="Second option">
@@ -453,6 +470,7 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="" class="letter">C</label>
                             <input type="text"
                             class="option form-control @error('quiz_2_option3') is-invalid @enderror"
                             id="quiz_2_option3" name="quiz_2_option3" value="{{ old('quiz_2_option3') }}" placeholder="Third option">
@@ -462,6 +480,7 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="" class="letter">D</label>
                             <input type="text"
                             class="option form-control @error('quiz_2_option4') is-invalid @enderror"
                             id="quiz_2_option4" name="quiz_2_option4" value="{{ old('quiz_2_option4') }}" placeholder="Fourth option">
@@ -471,6 +490,7 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="" class="letter">E</label>
                             <input type="text"
                             class="option form-control @error('quiz_2_option5') is-invalid @enderror"
                             id="quiz_2_option5" name="quiz_2_option5" value="{{ old('quiz_2_option5') }}" placeholder="Fifth option">
@@ -562,6 +582,7 @@
                         </script>
 
                         <div class="form-group">
+                            <label for="" class="letter">A</label>
                             <input type="text"
                             class="option form-control @error('quiz_3_option1') is-invalid @enderror"
                             id="quiz_3_option1" name="quiz_3_option1" value="{{ old('quiz_3_option1') }}" placeholder="First option">
@@ -571,6 +592,7 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="" class="letter">B</label>
                             <input type="text"
                             class="option form-control @error('quiz_3_option2') is-invalid @enderror"
                             id="quiz_3_option2" name="quiz_3_option2" value="{{ old('quiz_3_option2') }}" placeholder="Second option">
@@ -580,6 +602,7 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="" class="letter">C</label>
                             <input type="text"
                             class="option form-control @error('quiz_3_option3') is-invalid @enderror"
                             id="quiz_3_option3" name="quiz_3_option3" value="{{ old('quiz_3_option3') }}" placeholder="Third option">
@@ -589,6 +612,7 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="" class="letter">D</label>
                             <input type="text"
                             class="option form-control @error('quiz_3_option4') is-invalid @enderror"
                             id="quiz_3_option4" name="quiz_3_option4" value="{{ old('quiz_3_option4') }}" placeholder="Fourth option">
@@ -598,6 +622,7 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="" class="letter">E</label>
                             <input type="text"
                             class="option form-control @error('quiz_3_option5') is-invalid @enderror"
                             id="quiz_3_option5" name="quiz_3_option5" value="{{ old('quiz_3_option5') }}" placeholder="Fifth option">
@@ -689,6 +714,7 @@
                         </script>
 
                         <div class="form-group">
+                            <label for="" class="letter">A</label>
                             <input type="text"
                             class="option form-control @error('quiz_4_option1') is-invalid @enderror"
                             id="quiz_4_option1" name="quiz_4_option1" value="{{ old('quiz_4_option1') }}" placeholder="First option">
@@ -698,6 +724,7 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="" class="letter">B</label>
                             <input type="text"
                             class="option form-control @error('quiz_4_option2') is-invalid @enderror"
                             id="quiz_4_option2" name="quiz_4_option2" value="{{ old('quiz_4_option2') }}" placeholder="Second option">
@@ -707,6 +734,7 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="" class="letter">C</label>
                             <input type="text"
                             class="option form-control @error('quiz_4_option3') is-invalid @enderror"
                             id="quiz_4_option3" name="quiz_4_option3" value="{{ old('quiz_4_option3') }}" placeholder="Third option">
@@ -716,6 +744,7 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="" class="letter">D</label>
                             <input type="text"
                             class="option form-control @error('quiz_4_option4') is-invalid @enderror"
                             id="quiz_4_option4" name="quiz_4_option4" value="{{ old('quiz_4_option4') }}" placeholder="Fourth option">
@@ -725,6 +754,7 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="" class="letter">E</label>
                             <input type="text"
                             class="option form-control @error('quiz_4_option5') is-invalid @enderror"
                             id="quiz_4_option5" name="quiz_4_option5" value="{{ old('quiz_4_option5') }}" placeholder="Fifth option">
@@ -816,6 +846,7 @@
                         </script>
 
                         <div class="form-group">
+                            <label for="" class="letter">A</label>
                             <input type="text"
                             class="option form-control @error('quiz_5_option1') is-invalid @enderror"
                             id="quiz_5_option1" name="quiz_5_option1" value="{{ old('quiz_5_option1') }}" placeholder="First option">
@@ -825,6 +856,7 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="" class="letter">B</label>
                             <input type="text"
                             class="option form-control @error('quiz_5_option2') is-invalid @enderror"
                             id="quiz_5_option2" name="quiz_5_option2" value="{{ old('quiz_5_option2') }}" placeholder="Second option">
@@ -834,6 +866,7 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="" class="letter">C</label>
                             <input type="text"
                             class="option form-control @error('quiz_5_option3') is-invalid @enderror"
                             id="quiz_5_option3" name="quiz_5_option3" value="{{ old('quiz_5_option3') }}" placeholder="Third option">
@@ -843,6 +876,7 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="" class="letter">D</label>
                             <input type="text"
                             class="option form-control @error('quiz_5_option4') is-invalid @enderror"
                             id="quiz_5_option4" name="quiz_5_option4" value="{{ old('quiz_5_option4') }}" placeholder="Fourth option">
@@ -852,6 +886,7 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="" class="letter">E</label>
                             <input type="text"
                             class="option form-control @error('quiz_5_option5') is-invalid @enderror"
                             id="quiz_5_option5" name="quiz_5_option5" value="{{ old('quiz_5_option5') }}" placeholder="Fifth option">
@@ -941,6 +976,7 @@
                         </script>
 
                         <div class="form-group">
+                            <label for="" class="letter">A</label>
                             <input type="text"
                             class="option form-control @error('quiz_6_option1') is-invalid @enderror"
                             id="quiz_6_option1" name="quiz_6_option1" value="{{ old('quiz_6_option1') }}" placeholder="First option">
@@ -950,6 +986,7 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="" class="letter">B</label>
                             <input type="text"
                             class="option form-control @error('quiz_6_option2') is-invalid @enderror"
                             id="quiz_6_option2" name="quiz_6_option2" value="{{ old('quiz_6_option2') }}" placeholder="Second option">
@@ -959,6 +996,7 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="" class="letter">C</label>
                             <input type="text"
                             class="option form-control @error('quiz_6_option3') is-invalid @enderror"
                             id="quiz_6_option3" name="quiz_6_option3" value="{{ old('quiz_6_option3') }}" placeholder="Third option">
@@ -968,6 +1006,7 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="" class="letter">D</label>
                             <input type="text"
                             class="option form-control @error('quiz_6_option4') is-invalid @enderror"
                             id="quiz_6_option4" name="quiz_6_option4" value="{{ old('quiz_6_option4') }}" placeholder="Fourth option">
@@ -977,6 +1016,7 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="" class="letter">E</label>
                             <input type="text"
                             class="option form-control @error('quiz_6_option5') is-invalid @enderror"
                             id="quiz_6_option5" name="quiz_6_option5" value="{{ old('quiz_6_option5') }}" placeholder="Fifth option">
@@ -1066,6 +1106,7 @@
                         </script>
 
                         <div class="form-group">
+                            <label for="" class="letter">A</label>
                             <input type="text"
                             class="option form-control @error('quiz_7_option1') is-invalid @enderror"
                             id="quiz_7_option1" name="quiz_7_option1" value="{{ old('quiz_7_option1') }}" placeholder="First option">
@@ -1075,6 +1116,7 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="" class="letter">B</label>
                             <input type="text"
                             class="option form-control @error('quiz_7_option2') is-invalid @enderror"
                             id="quiz_7_option2" name="quiz_7_option2" value="{{ old('quiz_7_option2') }}" placeholder="Second option">
@@ -1084,6 +1126,7 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="" class="letter">C</label>
                             <input type="text"
                             class="option form-control @error('quiz_7_option3') is-invalid @enderror"
                             id="quiz_7_option3" name="quiz_7_option3" value="{{ old('quiz_7_option3') }}" placeholder="Third option">
@@ -1093,6 +1136,7 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="" class="letter">D</label>
                             <input type="text"
                             class="option form-control @error('quiz_7_option4') is-invalid @enderror"
                             id="quiz_7_option4" name="quiz_7_option4" value="{{ old('quiz_7_option4') }}" placeholder="Fourth option">
@@ -1102,6 +1146,7 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="" class="letter">E</label>
                             <input type="text"
                             class="option form-control @error('quiz_7_option5') is-invalid @enderror"
                             id="quiz_7_option5" name="quiz_7_option5" value="{{ old('quiz_7_option5') }}" placeholder="Fifth option">
@@ -1191,6 +1236,7 @@
                         </script>
 
                         <div class="form-group">
+                            <label for="" class="letter">A</label>
                             <input type="text"
                             class="option form-control @error('quiz_8_option1') is-invalid @enderror"
                             id="quiz_8_option1" name="quiz_8_option1" value="{{ old('quiz_8_option1') }}" placeholder="First option">
@@ -1200,6 +1246,7 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="" class="letter">B</label>
                             <input type="text"
                             class="option form-control @error('quiz_8_option2') is-invalid @enderror"
                             id="quiz_8_option2" name="quiz_8_option2" value="{{ old('quiz_8_option2') }}" placeholder="Second option">
@@ -1209,6 +1256,7 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="" class="letter">C</label>
                             <input type="text"
                             class="option form-control @error('quiz_8_option3') is-invalid @enderror"
                             id="quiz_8_option3" name="quiz_8_option3" value="{{ old('quiz_8_option3') }}" placeholder="Third option">
@@ -1218,6 +1266,7 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="" class="letter">D</label>
                             <input type="text"
                             class="option form-control @error('quiz_8_option4') is-invalid @enderror"
                             id="quiz_8_option4" name="quiz_8_option4" value="{{ old('quiz_8_option4') }}" placeholder="Fourth option">
@@ -1227,6 +1276,7 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="" class="letter">E</label>
                             <input type="text"
                             class="option form-control @error('quiz_8_option5') is-invalid @enderror"
                             id="quiz_8_option5" name="quiz_8_option5" value="{{ old('quiz_8_option5') }}" placeholder="Fifth option">
@@ -1316,6 +1366,7 @@
                         </script>
 
                         <div class="form-group">
+                            <label for="" class="letter">A</label>
                             <input type="text"
                             class="option form-control @error('quiz_9_option1') is-invalid @enderror"
                             id="quiz_9_option1" name="quiz_9_option1" value="{{ old('quiz_9_option1') }}" placeholder="First option">
@@ -1325,6 +1376,7 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="" class="letter">B</label>
                             <input type="text"
                             class="option form-control @error('quiz_9_option2') is-invalid @enderror"
                             id="quiz_9_option2" name="quiz_9_option2" value="{{ old('quiz_9_option2') }}" placeholder="Second option">
@@ -1334,6 +1386,7 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="" class="letter">C</label>
                             <input type="text"
                             class="option form-control @error('quiz_9_option3') is-invalid @enderror"
                             id="quiz_9_option3" name="quiz_9_option3" value="{{ old('quiz_9_option3') }}" placeholder="Third option">
@@ -1343,6 +1396,7 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="" class="letter">D</label>
                             <input type="text"
                             class="option form-control @error('quiz_9_option4') is-invalid @enderror"
                             id="quiz_9_option4" name="quiz_9_option4" value="{{ old('quiz_9_option4') }}" placeholder="Fourth option">
@@ -1352,6 +1406,7 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="" class="letter">E</label>
                             <input type="text"
                             class="option form-control @error('quiz_9_option5') is-invalid @enderror"
                             id="quiz_9_option5" name="quiz_9_option5" value="{{ old('quiz_9_option5') }}" placeholder="Fifth option">
@@ -1441,6 +1496,7 @@
                         </script>
 
                         <div class="form-group">
+                            <label for="" class="letter">A</label>
                             <input type="text"
                             class="option form-control @error('quiz_10_option1') is-invalid @enderror"
                             id="quiz_10_option1" name="quiz_10_option1" value="{{ old('quiz_10_option1') }}" placeholder="First option">
@@ -1450,6 +1506,7 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="" class="letter">B</label>
                             <input type="text"
                             class="option form-control @error('quiz_10_option2') is-invalid @enderror"
                             id="quiz_10_option2" name="quiz_10_option2" value="{{ old('quiz_10_option2') }}" placeholder="Second option">
@@ -1459,6 +1516,7 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="" class="letter">C</label>
                             <input type="text"
                             class="option form-control @error('quiz_10_option3') is-invalid @enderror"
                             id="quiz_10_option3" name="quiz_10_option3" value="{{ old('quiz_10_option3') }}" placeholder="Third option">
@@ -1468,6 +1526,7 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="" class="letter">D</label>
                             <input type="text"
                             class="option form-control @error('quiz_10_option4') is-invalid @enderror"
                             id="quiz_10_option4" name="quiz_10_option4" value="{{ old('quiz_10_option4') }}" placeholder="Fourth option">
@@ -1477,6 +1536,7 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="" class="letter">E</label>
                             <input type="text"
                             class="option form-control @error('quiz_10_option5') is-invalid @enderror"
                             id="quiz_10_option5" name="quiz_10_option5" value="{{ old('quiz_10_option5') }}" placeholder="Fifth option">

@@ -194,13 +194,15 @@
 
         .main .content {
           position: relative;
-          left: 7%;
+          left: 0%;
           right: 10%;
-          top: 5%;
+          top: 15%;
+          margin-bottom: 6vh;
         }
 
         .main .content .quiz {
-            width: 100vh;
+            max-width: 105vh;
+            padding-right: 10vh;
         }
       }
 

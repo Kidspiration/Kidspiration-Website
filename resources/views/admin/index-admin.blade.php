@@ -176,6 +176,14 @@
           right: 10%;
           top: 5%;
         }
+
+        .main .content .intro {
+            font-size: 4.3vh;
+        }
+
+        .main .content .start {
+            left: 32%;
+        }
       }
 
       @media only screen and (max-width: 1849px) {

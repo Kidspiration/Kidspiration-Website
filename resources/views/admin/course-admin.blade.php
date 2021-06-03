@@ -154,11 +154,29 @@
             display: none;
         }
 
+        .main .row {
+            margin-bottom: 6vh;
+        }
+
         .main .thumbnail {
           position: relative;
           left: 25%;
           right: 10%;
           top: 5%;
+          width: 330px;
+        }
+
+        .thumbnail a .caption p {
+            font-size: 2.5vh;
+        }
+
+        .thumbnail a .caption span {
+            font-size: 2vh;
+        }
+
+        .thumbnail a .caption .fifth {
+            font-size: 2.5vh;
+            word-spacing: -1px;
         }
       }
 
@@ -305,7 +323,7 @@
                             <div class="caption">
                                 <h3>5th Grade</h3>
                                 <span><i class="fas fa-book"></i> {{ $courses->where('grade', 'E')->count() }} Courses</span>
-                                <p>It is time to greet someone, introduce yourself to someone, and also understand basic math.</p>
+                                <p class="fifth">It is time to greet someone, introduce yourself to someone, and also understand basic math.</p>
                             </div>
                         </a>
                     </div>

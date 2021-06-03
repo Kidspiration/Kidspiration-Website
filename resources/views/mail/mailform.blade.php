@@ -45,6 +45,7 @@
     .main .core {
         animation-duration: .7s;
         animation-delay: .7s;
+        margin-top: 17vh;
     }
 
     .main .container {
@@ -52,7 +53,7 @@
         width: 950px;
         display: block;
         margin-top: 7vh;
-        margin-bottom: 10vh;
+        margin-bottom: 5vh;
         font-size: 3.5vh;
         animation-duration: .7s;
         animation-delay: 1.1s;
@@ -78,6 +79,11 @@
         text-align: center;
         margin-top: 10vh;
         color: white;
+    }
+
+    #sec-2 .second {
+        background-image: linear-gradient(rgba(255, 255, 255, 0.698),rgba(255, 255, 255, 0.678)), url(/img/bg7.jpg);
+        background-position: center;
     }
 
     .second .content h1 {
@@ -198,6 +204,46 @@
         }
         60% {
             transform: translateY(-15px);
+        }
+    }
+
+    @media only screen and (min-width: 1850px)
+    {
+        .main .core {
+            font-size: 5vh;
+        }
+
+        #sec-2 .second {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.698),rgba(255, 255, 255, 0.678)), url(/img/bg7.jpg);
+            background-position: center;
+        }
+
+        .second .content h1 {
+            padding-top: 30vh;
+        }
+
+        .second .content form {
+            margin: auto;
+            width: 650px;
+            margin-bottom: -15vh;
+        }
+
+        .second .content .bottom {
+            position: relative;
+            padding-top: 24vh;
+        }
+
+        .second .content .bottom ul {
+            text-align: center;
+            position: relative;
+            padding-bottom: 0vh;
+            color: white;
+            font-size: 3vh;
+        }
+
+        .second .content .bottom .cp {
+            padding-bottom: 4vh;
+            font-size: 2vh;
         }
     }
 </style>

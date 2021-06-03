@@ -178,9 +178,19 @@
             width: 50%;
         }
 
-        .main .content {
+        .main .logo {
+          border-radius: 100vh;
+          width: 10%;
+          display: inline-block;
+          position: fixed;
+          top: 10%;
+          left: 76%;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+          transition: 0.7s ease;
+      }
 
-            left: 70%;
+        .main .content {
+            left: 69%;
             position: fixed;
             display: inline-block;
             margin: -4%;
@@ -207,6 +217,28 @@
 
         .content .btnAdmin {
             margin-bottom: -5vh;
+        }
+
+        .content a {
+            border: 2px solid rgb(92, 193, 239);
+            border-radius: 40px;;
+            color: rgb(60, 135, 255);
+            display: block;
+            padding: 15px;
+            padding-left: 20%;
+            padding-right: 20%;
+            text-align: center;
+            text-decoration: none;
+            margin-bottom: 5px;
+            margin: 10% 10% -5% 0;
+            font-size: 18px;
+            font-weight: 750;
+        }
+
+        .cp {
+            position: absolute;
+            bottom: -33%;
+            left: 26%;
         }
     }
 

@@ -134,6 +134,7 @@
           font-size: 4.5vh;
           font-family: 'Pangolin', cursive;
           margin-top: 2vh;
+          width: 150%;
       }
 
       .main .content .question {
@@ -248,10 +249,39 @@
         }
 
         .main .content {
-          position: fixed;
-          left: 35%;
+          position: relative;
+          left: 0%;
           right: 10%;
           top: 5%;
+        }
+
+        .main .content p {
+          font-size: 3vh;
+        }
+
+        .bottom {
+          background: linear-gradient(rgb(61, 168, 255),rgb(78, 175, 255));
+          left: -25%;
+          right: -50%;
+          bottom: 0;
+          position: absolute;
+          width: 147.5%;
+          height: 110px;
+          z-index: -1;
+          margin-bottom: -200px;
+          color: white;
+          overflow: auto;
+      }
+
+      .bottom .writers {
+          position: relative;
+          z-index: 5;
+          font-size: 1.8vh;
+          left: 15%;
+          margin-top: 3%;
+          max-width: 1500px;
+          bottom: 0;
+          font-weight: lighter;
         }
       }
 

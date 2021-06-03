@@ -31,6 +31,10 @@
             height: 135vh;
         }
 
+        .main .core {
+            font-size: 7vh;
+        }
+
         .container {
             margin: auto;
             width: 950px;
@@ -280,10 +284,16 @@
 
         .main .contributor {
             margin-top: 23vh;
+            font-size: 7vh;
         }
 
         .second {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.698),rgba(255, 255, 255, 0.678)), url(/img/bg4.jpg);
+            background-position: center;
+        }
 
+        .second .content .container {
+            width: 200vh;
         }
 
         .second .content h1 {
@@ -291,6 +301,7 @@
             position: relative;
             margin-top: 10vh;
             padding-top: 10vh;
+            font-size: 7vh;
             top: 30%;
             color: rgb(58, 166, 255);
         }
@@ -301,11 +312,13 @@
 
         .second .content .text p {
             text-align: justify;
-            font-size: 6vh;
+            font-size: 5vh;
+            margin-bottom: 30vh;
         }
 
         .second .content .bottom {
-            margin-top: 17vh;
+            margin-top: -11vh;
+            padding-top: 0vh;
         }
 
         .second .content .bottom ul {
@@ -334,6 +347,119 @@
         .second .content .bottom ul li a:hover {
             text-decoration: underline;
         }
+
+        @media only screen and (min-width: 1850px) {
+            .second {
+                background-color: white;
+                height: 100vh;
+            }
+
+            .main {
+                margin-bottom: 50vh;
+                height: 65vh;
+            }
+
+            .container {
+                margin: auto;
+                width: 950px;
+                display: flex;
+                margin-top: 7vh;
+                margin-bottom: 0vh;
+            }
+
+            .container2 {
+                margin: auto;
+                width: 670px;
+                position: relative;
+                display: flex;
+                margin-top: 5vh;
+            }
+
+            .main .contributor {
+                margin-top: -10vh;
+            }
+
+            .container2 .frame4 {
+                width: 50vh;
+                height: 50vh;
+                position: relative;
+                display: inline-block;
+                left: 0%;
+            }
+
+            .container2 .frame5 {
+                width: 50vh;
+                height: 50vh;
+                position: relative;
+                display: inline-block;
+                right: 0;
+                margin-left: 6vh;
+            }
+
+            .frame4 {
+            animation-duration: .7s;
+            animation-delay: 2.5s;
+        }
+
+        .frame4 .photo {
+            overflow: hidden;
+            border-radius: 50vh;
+            width: 100%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+            margin-bottom: 5%;
+        }
+
+        .frame4 .photo img {
+            border-radius: 50vh;
+            box-sizing: border-box;
+            width: 100%;
+            margin: 0%;
+            transition: .3s ease;
+        }
+
+        .frame5 .photo {
+            overflow: hidden;
+            border-radius: 50vh;
+            width: 100%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+            margin-bottom: 5%;
+        }
+
+        .frame5 .photo img {
+            border-radius: 50vh;
+            box-sizing: border-box;
+            width: 100%;
+            margin: 0%;
+            transition: .3s ease;
+        }
+
+        .second .content h1 {
+            text-align: center;
+            position: relative;
+            margin-top: 10vh;
+            padding-top: 20vh;
+            font-size: 7vh;
+            color: rgb(58, 166, 255);
+        }
+
+        .second .content .container {
+            width: 350vh;
+        }
+
+        .second .content .logo img {
+            width: 85%;
+        }
+
+        .second .content .text p {
+            text-align: justify;
+            font-size: 4vh;
+        }
+
+        .second .content .bottom {
+            position: relative;
+            margin-top: -8vh;
+        }
+    }
     </style>
 </head>
 <body>
@@ -393,7 +519,7 @@
     <div class="second">
         <div class="content">
             <h1>About Us</h1>
-            <div class="container p-4 animated fadeIn">
+            <div class="container animated fadeIn">
                 <div class="row">
                     <div class="col-4">
                         <div class="logo">
@@ -403,7 +529,7 @@
                     <div class="col">
                         <div class="content animated fadeInUp">
                             <div class="text">
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias ut tenetur nihil eveniet deleniti corrupti rem maiores ab, vitae voluptatem, impedit esse libero! Nemo, consequatur?</p>
+                                <p>Kidspiration is an English education website made by 5 young university students. This website has a goal that is to help Indonesian elementary students improve their English. Even if they still can't understand English material from their school's teacher. Hopefully, this website can be an alternate for their learning.</p>
                             </div>
                         </div>
                     </div>

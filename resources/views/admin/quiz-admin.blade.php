@@ -198,16 +198,26 @@
             display: none;
         }
 
+        .main .content table {
+            margin-bottom: 20vh;
+        }
+
         .main .content {
           position: relative;
-          left: 7%;
+          left: 0%;
           right: 10%;
           top: 5%;
         }
 
         .main .content .quiz {
-            width: 100vh;
+            width: 110vh;
         }
+
+        table tr td i {
+          position: fixed;
+          right: -7%;
+          font-size: 7vh;
+      }
       }
 
       @media only screen and (max-width: 1849px) {

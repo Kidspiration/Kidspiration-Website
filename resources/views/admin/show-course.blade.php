@@ -258,7 +258,7 @@
           position: relative;
           left: 5%;
           right: 0%;
-          top: 0%;
+          top: 3%;
         }
 
         .bottom {
@@ -267,9 +267,9 @@
           right: -50%;
           bottom: 0;
           position: absolute;
-          width: 135.9%;
-          height: 100px;
-          z-index: 7;
+          width: 143%;
+          height: 110px;
+          z-index: -1;
           margin-bottom: -200px;
           color: white;
           overflow: auto;
@@ -278,13 +278,13 @@
       .bottom .writers {
           position: relative;
           z-index: 5;
-          font-size: 2.3vh;
-          left: 18%;
-          margin-top: 2.3%;
-          width: 900px;
+          font-size: 1.8vh;
+          left: 15%;
+          margin-top: 3%;
+          max-width: 1500px;
           bottom: 0;
           font-weight: lighter;
-      }
+        }
       }
 
       @media only screen and (max-width: 1849px) {

@@ -183,15 +183,31 @@
             width: 45%;
         }
 
-        .main .content {
-            top: 55%;
-            left: 70%;
-            position: fixed;
-            display: inline-block;
-            margin: auto;
+        .content {
             align-items: center;
-            padding: 0;
-            box-sizing: border-box;
+            position: fixed;
+            right: 110px;
+            top: 38%;
+            bottom: 25%;
+            z-index: 2;
+        }
+
+        .main .content form .btn {
+            margin-top: 5%;
+            width: 100%;
+            padding-top: 4%;
+            padding-bottom: 4%;
+            font-weight: 1000;
+            font-size: 3vh;
+            background: rgb(92, 193, 239);
+            color: white;
+            transition: .2s ease;
+        }
+
+        .cp {
+            position: absolute;
+            bottom: -70%;
+            left: 25%;
         }
     }
 

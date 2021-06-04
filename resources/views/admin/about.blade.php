@@ -537,7 +537,7 @@
             </div>
             <div class="bottom">
                 <ul>
-                    <li><a href="{{ route('courses.index') }}">Home</a></li> |
+                    <li><a href="{{ route('courses.welcome') }}">Home</a></li> |
                     <li><a href="{{ route('courses.course') }}">Courses</a></li> |
                     <li><a href="{{ route('courses.quiz') }}">Quizzes</a></li> |
                     <li><a href="#">Copyright</a></li> |

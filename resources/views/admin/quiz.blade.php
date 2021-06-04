@@ -340,7 +340,7 @@
                         <tr>
                             <td>
                                 <a name="" id="" class="quiz btn btn-primary"
-                                href="{{route('quizzes.showAdmin', ['quiz' => $quiz->id])}}"
+                                href="{{route('quizzes.show', ['quiz' => $quiz->id])}}"
                                 role="button">{{ $quiz->name }}
                                 @if ( $quiz->grade == 'A' )
                                     <i class="fas fa-dice-one"></i>

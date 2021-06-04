@@ -17,7 +17,7 @@ class QuizController extends Controller
     public function quiz()
     {
         $quizzes = Quiz::all()->sortBy('grade');
-        return view ('admin.quiz-admin', ['quizzes' => $quizzes]);
+        return view ('admin.quiz', ['quizzes' => $quizzes]);
     }
 
     public function create()
@@ -468,7 +468,7 @@ class QuizController extends Controller
         // Quiz::where('id', $request->id)->update($validateData);
         // $quiz->update($validateData);
         // return redirect()->route('courses.quiz');
-        return redirect()->route('quizzes.showAdmin', ['quiz' => $request->id])
+        return redirect()->route('quizzes.show', ['quiz' => $request->id])
             ->with('message', "{$request->name} updated successfully");
     }
 
@@ -591,7 +591,7 @@ class QuizController extends Controller
     public function show(Quiz $quiz)
     {
         // $result = Mahasiswa::findOrFail($mahasiswa);
-        return view('admin.show-quiz-admin',['quiz'=>$quiz]);
+        return view('admin.show-quiz',['quiz'=>$quiz]);
     }
 
     public function edit(Quiz $quiz)

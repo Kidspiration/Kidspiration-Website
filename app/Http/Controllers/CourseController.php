@@ -25,16 +25,16 @@ class CourseController extends Controller
         $this->middleware('auth')->only('create','store','update','edit','destroy');
     }
 
-    public function index()
+    public function welcome()
     {
         $courses = Course::all();
-        return view ('admin.index-admin', ['courses' => $courses]);
+        return view ('admin.welcome', ['courses' => $courses]);
     }
 
     public function course()
     {
         $courses = Course::all();
-        return view ('admin.course-admin', ['courses' => $courses]);
+        return view ('admin.course', ['courses' => $courses]);
     }
 
     public function courseA()
@@ -76,17 +76,17 @@ class CourseController extends Controller
     public function quiz()
     {
         $courses = Course::all();
-        return view ('admin.quiz-admin', ['courses' => $courses]);
+        return view ('admin.quiz', ['courses' => $courses]);
     }
 
-    public function welcome()
+    public function index()
     {
-        return view('admin.welcome');
+        return view('admin.index');
     }
 
     public function adminLogin()
     {
-        return view('admin.admin-login');
+        return view('admin.login');
     }
 
     /**

@@ -311,7 +311,7 @@
                             </span>
                         @enderror
                     </div>
-                    <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
+                    {{-- <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a> --}}
                     <button type="submit" class="btn btn-primary mb-2 animated fadeInUp">
                         {{ __('Login') }}
                     </button>

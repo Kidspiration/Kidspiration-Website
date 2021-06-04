@@ -55,7 +55,7 @@
         margin-right: 3vh;
         text-align: left;
         padding-left: 40px;
-        padding-right: 40vh;
+        padding-right: 10vh;
         padding-top: 30px;
         padding-bottom: 30px;
         border: 1px solid rgb(78, 175, 255);

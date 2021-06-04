@@ -280,7 +280,7 @@
                 <div>
                     <div class="sidebar">
                         <a class="logo animated zoomIn" href="{{ route('courses.index') }}"><img class="image" src="/img/K.png" alt="Kidspiration-Logo"></a>
-                        <a class="home" href="{{ route('courses.index') }}"><i class="fas fa-house-damage"></i> Home</a>
+                        <a class="home" href="{{ route('courses.welcome') }}"><i class="fas fa-house-damage"></i> Home</a>
                         <a class="courses" href="{{ route('courses.course') }}"><i class="fab fa-discourse"></i> Courses</a>
                         <a class="quizzes" href="{{ route('courses.quiz') }}"><i class="fas fa-sticky-note"></i> Quizzes</a>
                         <p>Wanna improve our website? <a class="github" href="https://github.com/Kidspiration/Kidspiration-Website" target="_blank">Visit our <i class="fab fa-github"></i> GitHub</a></p>
@@ -300,7 +300,7 @@
 
                     <div class="bottombar">
                         {{-- <a class="logo" href="{{ route('courses.index') }}"><img class="image" src="/img/K.png" alt="Kidspiration-Logo"></a> --}}
-                        <a class="home" href="{{ route('courses.index') }}"><i class="fas fa-house-damage"></i></a>
+                        <a class="home" href="{{ route('courses.welcome') }}"><i class="fas fa-house-damage"></i></a>
                         <a class="courses" href="{{ route('courses.course') }}"><i class="fab fa-discourse"></i></a>
                         <a class="quizzes" href="{{ route('courses.quiz') }}"><i class="fas fa-sticky-note"></i></a>
                     </div>
